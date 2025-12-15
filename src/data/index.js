@@ -153,9 +153,10 @@ export const education = [
 ];
 
 export const certifications = [
-    { title: 'Foundations of User Experience (UX) Design', issuer: 'Google | Coursera', year: '2023', link: '#' },
-    { title: 'Coding Fundamentals', issuer: 'Google', year: '2022', link: '#' },
-    { title: 'Graphic Designing', issuer: 'Tops Technologies', year: '2022', link: '#' },
+    { title: 'Foundations of User Experience (UX) Design', issuer: 'Google | Coursera', year: '2025', link: 'https://www.coursera.org/account/accomplishments/verify/UMJCPWJ6QJBE' },
+    { title: 'Start the UX Design Process: Empathize, Define, and Ideate', issuer: 'Google | Coursera', year: '2023', link: 'https://www.coursera.org/account/accomplishments/verify/5UKVMCP3T3MX' },
+    { title: 'Coding Fundamentals', issuer: 'Google', year: '2022', link: 'https://www.linkedin.com/posts/jeelthumar_google-grasshopper-activity-7084604020706709504-cINN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADh2xs0BtML7xB0tRbwwjsHIz3CikQjqBxY' },
+    { title: 'Graphic Designing', issuer: 'Tops Technologies', year: '2022', link: 'https://www.linkedin.com/posts/jeelthumar_topstechnologies-graphicdesign-activity-7084604397342658561-bQcS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADh2xs0BtML7xB0tRbwwjsHIz3CikQjqBxY' },
 ];
 
 export const blogPosts = [
