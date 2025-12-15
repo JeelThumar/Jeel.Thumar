@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Sticker from './Sticker';
 import TextReveal from './TextReveal';
-import { Star, Sparkles, Zap } from 'lucide-react';
+import { Star, Sparkles, Zap, ArrowDownToLine } from 'lucide-react';
 import Spotlight from './Spotlight';
 
 const Hero = () => {
@@ -120,6 +120,34 @@ const Hero = () => {
                         delay={1.5}
                     />
 
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 1.8 }}
+                    >
+                        <motion.a
+                            href="/Jeel Thumar - Resume.pdf"
+                            download
+                            className="relative inline-flex items-center gap-2 px-6 py-2.5 bg-white text-black border-2 border-black rounded-lg font-bold font-syne uppercase tracking-wide cursor-pointer overflow-hidden group"
+                            whileHover={{
+                                translate: "4px 4px",
+                                boxShadow: "0px 0px 0px 0px #000"
+                            }}
+                            initial={{
+                                boxShadow: "4px 4px 0px 0px #000"
+                            }}
+                            style={{
+                                boxShadow: "4px 4px 0px 0px #000"
+                            }}
+                        >
+                            <span className="relative z-10 flex items-center gap-2">
+                                <ArrowDownToLine size={18} strokeWidth={2.5} />
+                                <span className="text-sm">Get Resume</span>
+                            </span>
+                            <div className="absolute inset-0 bg-purple-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0" />
+                        </motion.a>
+                    </motion.div>
 
                 </motion.div>
             </div>

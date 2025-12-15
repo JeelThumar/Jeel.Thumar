@@ -41,7 +41,7 @@ const Navbar = ({ isVisible }) => {
                             const isActive = location.pathname === item.path;
                             const Icon = item.icon;
 
-                            // Render custom button for Contact, Link for others
+                            // Render custom button for Contact
                             if (item.onClick) {
                                 return (
                                     <button
