@@ -1,16 +1,34 @@
-# React + Vite
+<h1 align="center">Welcome to creative-portfolio 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: Jeel Thumar" src="https://img.shields.io/badge/License-Jeel Thumar-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/Justt\_Jeel" target="_blank">
+    <img alt="Twitter: Justt\_Jeel" src="https://img.shields.io/twitter/follow/Justt\_Jeel.svg?style=social" />
+  </a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### ✨ [Demo](https://jeel-thumar.vercel.app/)
 
-Currently, two official plugins are available:
+## Install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```sh
+npm install
+```
 
-## React Compiler
+## Author
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👤 **Jeel Thumar**
 
-## Expanding the ESLint configuration
+* Website: https://jeel-thumar.vercel.app/
+* Twitter: [@Justt\_Jeel](https://twitter.com/Justt\_Jeel)
+* Github: [@justt.jeel](https://github.com/justt.jeel)
+* LinkedIn: [@jeelthumar](https://linkedin.com/in/jeelthumar)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
