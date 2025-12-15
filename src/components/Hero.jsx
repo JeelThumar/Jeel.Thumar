@@ -39,7 +39,7 @@ const Hero = () => {
                 </div>
             </Sticker>
 
-            <Sticker className="bottom-[10%] right-[2%] md:bottom-[25%] md:right-[15%] text-purple-500" rotation={15} delay={1.2}>
+            <Sticker className="bottom-[18%] right-[5%] md:bottom-[25%] md:right-[15%] text-purple-500" rotation={15} delay={1.2}>
                 <div className="scale-75 md:scale-100 bg-black text-white font-hand p-3 md:p-4 rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] rotate-3 text-sm md:text-base">
                     Hello there! 👋
                 </div>
@@ -152,6 +152,11 @@ const Hero = () => {
                             whileHover={{
                                 translate: "4px 4px",
                                 boxShadow: "0px 0px 0px 0px #000"
+                            }}
+                            whileTap={{
+                                scale: 0.95,
+                                translate: "2px 2px",
+                                boxShadow: "2px 2px 0px 0px #000"
                             }}
                             initial={{
                                 boxShadow: "4px 4px 0px 0px #000"
