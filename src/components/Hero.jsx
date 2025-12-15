@@ -5,6 +5,25 @@ import { Star, Sparkles, Zap, ArrowDownToLine } from 'lucide-react';
 import Spotlight from './Spotlight';
 
 const Hero = () => {
+    const handleDownload = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('/Jeel-Thumar-Resume.pdf');
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Jeel-Thumar-Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error('Download failed:', error);
+            window.location.href = '/Jeel-Thumar-Resume.pdf';
+        }
+    };
+
     return (
         <section className="h-[100dvh] min-h-[600px] flex flex-col justify-center items-center px-4 overflow-hidden relative text-black">
             {/* Refined Spotlight Effect - Pattern Reveal */}
@@ -20,7 +39,7 @@ const Hero = () => {
                 </div>
             </Sticker>
 
-            <Sticker className="bottom-[15%] right-[5%] md:bottom-[25%] md:right-[15%] text-purple-500" rotation={15} delay={1.2}>
+            <Sticker className="bottom-[10%] right-[2%] md:bottom-[25%] md:right-[15%] text-purple-500" rotation={15} delay={1.2}>
                 <div className="scale-75 md:scale-100 bg-black text-white font-hand p-3 md:p-4 rounded-lg shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] rotate-3 text-sm md:text-base">
                     Hello there! 👋
                 </div>
@@ -127,9 +146,9 @@ const Hero = () => {
                         transition={{ delay: 1.8 }}
                     >
                         <motion.a
-                            href="/Jeel Thumar - Resume.pdf"
-                            download
-                            className="relative inline-flex items-center gap-2 px-6 py-2.5 bg-white text-black border-2 border-black rounded-lg font-bold font-syne uppercase tracking-wide cursor-pointer overflow-hidden group"
+                            href="/Jeel-Thumar-Resume.pdf"
+                            onClick={handleDownload}
+                            className="relative inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 bg-white text-black border-2 border-black rounded-lg font-bold font-syne uppercase tracking-wide cursor-pointer overflow-hidden group"
                             whileHover={{
                                 translate: "4px 4px",
                                 boxShadow: "0px 0px 0px 0px #000"
@@ -142,8 +161,8 @@ const Hero = () => {
                             }}
                         >
                             <span className="relative z-10 flex items-center gap-2">
-                                <ArrowDownToLine size={18} strokeWidth={2.5} />
-                                <span className="text-sm">Get Resume</span>
+                                <ArrowDownToLine size={16} className="w-4 h-4 md:w-[18px] md:h-[18px]" strokeWidth={2.5} />
+                                <span className="text-xs md:text-sm">Get Resume</span>
                             </span>
                             <div className="absolute inset-0 bg-purple-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0" />
                         </motion.a>
