@@ -213,7 +213,7 @@ const Contact = () => {
 
                 {/* Footer */}
                 <div className="mt-8 text-center">
-                    <p className="font-mono text-black/30 text-[10px] uppercase tracking-widest">
+                    <p className="font-mono text-black/30 text-[11px] uppercase tracking-widest">
                         © {new Date().getFullYear()} Jeel Thumar. All rights reserved. <br />
                         Designed & Built with 💛
                     </p>
