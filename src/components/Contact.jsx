@@ -173,6 +173,7 @@ const Contact = () => {
                                                 name="message"
                                                 value={formData.message}
                                                 onChange={handleChange}
+                                                required
                                                 rows={3}
                                                 placeholder="Let's build something crazy..."
                                                 className="w-full bg-transparent border-b-2 border-dashed border-black/20 py-2 text-xl font-hand focus:outline-none focus:border-purple-500 transition-colors placeholder:text-black/10 resize-none text-black"
