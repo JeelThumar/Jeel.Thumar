@@ -11,12 +11,6 @@
 
 ### ✨ [Demo](https://jeel-thumar.vercel.app/)
 
-## Install
-
-```sh
-npm install
-```
-
 ## Author
 
 👤 **Jeel Thumar**
