@@ -3,17 +3,21 @@ import { useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
 import CustomCursor from '../components/CustomCursor';
+import Spotlight from '../components/Spotlight';
 import Navbar from '../components/Navbar';
 import GrainOverlay from '../components/GrainOverlay';
 import Contact from '../components/Contact';
 import { ReactLenis, useLenis } from 'lenis/react';
 import { Outlet } from 'react-router-dom';
 
+import { useSpotlight } from '../context/SpotlightContext';
+
 const Layout = () => {
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
     const [showBackToTop, setShowBackToTop] = useState(false);
     const location = useLocation();
     const lenis = useLenis();
+    const { color } = useSpotlight();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -57,6 +61,11 @@ const Layout = () => {
 
                 {/* Global Grid Background */}
                 <div className="fixed inset-0 pointer-events-none z-[-5] opacity-40 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+                {/* Global Spotlight Effect */}
+                <div className="fixed inset-0 pointer-events-none z-[-4]">
+                    <Spotlight color={color} />
+                </div>
 
                 <GrainOverlay />
                 <Navbar isVisible={isNavbarVisible} />

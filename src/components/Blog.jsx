@@ -5,14 +5,16 @@ import { ArrowRight } from 'lucide-react';
 
 import { blogPosts } from '../data';
 
-import { useState, useEffect } from 'react';
-
-import Spotlight from './Spotlight';
+import { useState, useEffect, useRef } from 'react';
+import { useSpotlightColor } from '../context/SpotlightContext';
 
 const Blog = ({ limit }) => {
     const [headerHovered, setHeaderHovered] = useState(false);
     const [hoveredPost, setHoveredPost] = useState(null);
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+    const sectionRef = useRef(null);
+    useSpotlightColor("#eab308", sectionRef);
 
     // Reverse posts to show newest first, then slice if limit exists
     const displayPosts = [...blogPosts].reverse().slice(0, limit || blogPosts.length);
@@ -26,8 +28,8 @@ const Blog = ({ limit }) => {
     }, []);
 
     return (
-        <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
-            <Spotlight color="#eab308" />
+        <section ref={sectionRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
+
             <div className="flex justify-between items-end mb-16 relative z-10">
                 <h2 className="text-4xl md:text-8xl font-syne font-bold uppercase leading-[0.8] tracking-tighter mix-blend-difference text-black">
                     Recent <br /> <span className="text-transparent stroke-black [-webkit-text-stroke:1px_black]">Thoughts</span>

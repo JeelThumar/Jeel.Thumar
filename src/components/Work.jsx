@@ -5,15 +5,19 @@ import { ArrowUpRight } from 'lucide-react';
 
 import { projects } from '../data';
 
-import Spotlight from './Spotlight';
+import { useRef } from 'react';
+import { useSpotlightColor } from '../context/SpotlightContext';
 
 const Work = ({ limit }) => {
+    const sectionRef = useRef(null);
+    useSpotlightColor("#3b82f6", sectionRef);
+
     // Reverse projects to show newest first, then slice if limit exists
     const displayProjects = [...projects].reverse().slice(0, limit || projects.length);
 
     return (
-        <section id="work" className="py-24 px-4 text-black overflow-visible relative mb-24">
-            <Spotlight color="#3b82f6" />
+        <section ref={sectionRef} id="work" className="py-24 px-4 text-black overflow-visible relative mb-24">
+
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-end mb-16 relative z-10">
                     <h2 className="text-6xl md:text-8xl font-syne font-bold uppercase leading-[0.8] tracking-tighter">

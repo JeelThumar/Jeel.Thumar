@@ -2,9 +2,14 @@ import { motion } from 'framer-motion';
 import Sticker from './Sticker';
 import TextReveal from './TextReveal';
 import { Star, Sparkles, Zap, ArrowDownToLine } from 'lucide-react';
-import Spotlight from './Spotlight';
+
+import { useRef } from 'react';
+import { useSpotlightColor } from '../context/SpotlightContext';
 
 const Hero = () => {
+    const sectionRef = useRef(null);
+    useSpotlightColor("#a855f7", sectionRef);
+
     const handleDownload = async (e) => {
         e.preventDefault();
         try {
@@ -25,10 +30,8 @@ const Hero = () => {
     };
 
     return (
-        <section className="h-[100dvh] min-h-[600px] flex flex-col justify-center items-center px-4 overflow-hidden relative text-black">
-            {/* Refined Spotlight Effect - Pattern Reveal */}
-            <Spotlight color="#a855f7" />
-
+        <section ref={sectionRef} className="min-h-[100dvh] flex flex-col justify-center items-center px-4 relative text-black py-20 md:py-0">
+            {/* Refined Spotlight Effect - Pattern Reveal - MOVED TO GLOBAL */}
 
             {/* Decorative Stickers - Hidden on mobile for cleaner look */}
             {/* Decorative Stickers */}
@@ -176,7 +179,6 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" />
         </section>
     );
 };

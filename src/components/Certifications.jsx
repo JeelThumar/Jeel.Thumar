@@ -2,12 +2,16 @@ import { motion } from 'framer-motion';
 
 import { certifications } from '../data';
 
-import Spotlight from './Spotlight';
+import { useRef } from 'react';
+import { useSpotlightColor } from '../context/SpotlightContext';
 
 const Certifications = () => {
+    const sectionRef = useRef(null);
+    useSpotlightColor("#06b6d4", sectionRef);
+
     return (
-        <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-black/10 text-black relative overflow-visible mb-24">
-            <Spotlight color="#06b6d4" />
+        <section ref={sectionRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
+
             <h2 className="text-4xl md:text-6xl font-syne font-bold mb-16">Certifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {certifications.map((cert, index) => (

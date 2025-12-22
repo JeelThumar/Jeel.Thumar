@@ -1,12 +1,16 @@
 import { motion } from 'framer-motion';
 import { skills, interests } from '../data';
 
-import Spotlight from './Spotlight';
+import { useRef } from 'react';
+import { useSpotlightColor } from '../context/SpotlightContext';
 
 const Expertise = () => {
+    const sectionRef = useRef(null);
+    useSpotlightColor("#f97316", sectionRef);
+
     return (
-        <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
-            <Spotlight color="#f97316" />
+        <section ref={sectionRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
+
             <h2 className="text-4xl md:text-6xl font-syne font-bold mb-16">Expertise & Interests</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
 

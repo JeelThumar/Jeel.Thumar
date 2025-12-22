@@ -28,16 +28,20 @@ function AppContent() {
   );
 }
 
+import { SpotlightProvider } from './context/SpotlightContext';
+
 function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <BrowserRouter>
-      <AnimatePresence mode="wait">
-        {loading && <Loader onComplete={() => setLoading(false)} />}
-      </AnimatePresence>
-      {!loading && <AppContent />}
-    </BrowserRouter>
+    <SpotlightProvider>
+      <BrowserRouter>
+        <AnimatePresence mode="wait">
+          {loading && <Loader onComplete={() => setLoading(false)} />}
+        </AnimatePresence>
+        {!loading && <AppContent />}
+      </BrowserRouter>
+    </SpotlightProvider>
   );
 }
 
