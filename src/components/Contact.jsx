@@ -95,7 +95,7 @@ const Contact = () => {
                             </div>
 
                             <div className="hidden md:block">
-                                <p className="font-mono text-xs text-black/40 mb-4 uppercase tracking-widest">Connect with me</p>
+                                <p className="font-mono text-xs text-black/60 mb-4 uppercase tracking-widest">Connect with me</p>
                                 <Socials />
                             </div>
                         </div>

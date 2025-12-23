@@ -48,6 +48,7 @@ const Navbar = ({ isVisible }) => {
                                         key={item.label}
                                         onClick={item.onClick}
                                         className="relative px-4 py-2 rounded-full transition-all group flex items-center gap-2 text-black hover:bg-black/5 cursor-pointer"
+                                        aria-label={item.label}
                                     >
                                         <Icon size={18} />
                                         <span className="text-sm font-medium hidden md:block">{item.label}</span>
@@ -63,6 +64,7 @@ const Navbar = ({ isVisible }) => {
                                         ? 'bg-black text-white'
                                         : 'text-black hover:bg-black/5'
                                         }`}
+                                    aria-label={item.label}
                                 >
                                     <Icon size={18} />
                                     <span className="text-sm font-medium hidden md:block">{item.label}</span>

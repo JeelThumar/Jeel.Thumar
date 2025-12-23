@@ -26,7 +26,7 @@ const Experience = () => {
                         <span className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-purple-500 rounded-full ring-4 ring-white"></span>
                         <span className="text-sm font-mono text-purple-600 mb-2 block">{exp.year}</span>
                         <h3 className="text-2xl font-bold font-syne">{exp.role}</h3>
-                        <h4 className="text-xl text-black/60 mb-2">{exp.company} <span className="text-sm text-black/40 ml-2">• {exp.location}</span></h4>
+                        <h4 className="text-xl text-black/60 mb-2">{exp.company} <span className="text-sm text-black/60 ml-2">• {exp.location}</span></h4>
                         <p className="text-black/50 max-w-2xl">{exp.description}</p>
                     </motion.div>
                 ))}

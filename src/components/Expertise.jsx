@@ -16,7 +16,7 @@ const Expertise = () => {
 
                 {/* Skills Section */}
                 <div>
-                    <h3 className="text-xl font-bold font-syne uppercase tracking-widest mb-8 text-black/40">Skills</h3>
+                    <h3 className="text-xl font-bold font-syne uppercase tracking-widest mb-8 text-black/60">Skills</h3>
                     <div className="flex flex-wrap gap-3">
                         {skills.map((skill, index) => (
                             <motion.span
@@ -35,7 +35,7 @@ const Expertise = () => {
 
                 {/* Beyond Work Section */}
                 <div>
-                    <h3 className="text-xl font-bold font-syne uppercase tracking-widest mb-8 text-black/40">Beyond Work</h3>
+                    <h3 className="text-xl font-bold font-syne uppercase tracking-widest mb-8 text-black/60">Beyond Work</h3>
                     <div className="flex flex-wrap gap-4 text-lg font-medium leading-relaxed items-center">
                         <span>I love</span>
                         {interests.map((item, index) => (

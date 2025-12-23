@@ -48,15 +48,15 @@ const ProjectDetail = () => {
                     </div>
                     <div className="md:w-1/3 space-y-8">
                         <div>
-                            <h3 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-2">Category</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-widest text-black/60 mb-2">Category</h3>
                             <p className="text-xl">{project.category}</p>
                         </div>
                         <div>
-                            <h3 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-2">Year</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-widest text-black/60 mb-2">Year</h3>
                             <p className="text-xl">{project.year}</p>
                         </div>
                         <div>
-                            <h3 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-2">Tech Stack</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-widest text-black/60 mb-2">Tech Stack</h3>
                             <div className="flex flex-wrap gap-2">
                                 {project.tech.map(t => (
                                     <span key={t} className="px-3 py-1 bg-black/10 rounded-full text-sm">{t}</span>

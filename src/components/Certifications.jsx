@@ -27,7 +27,7 @@ const Certifications = () => {
                         className="bg-white/80 backdrop-blur-md border border-black/10 rounded-lg shadow-lg p-8 hover:border-black/20 transition-all block cursor-pointer h-full flex flex-col"
                     >
                         <h3 className="text-xl font-bold mb-8 font-syne text-purple-900 leading-tight">{cert.title}</h3>
-                        <div className="flex justify-between items-end mt-auto text-sm text-black/40">
+                        <div className="flex justify-between items-end mt-auto text-sm text-black/60">
                             <span>{cert.issuer}</span>
                             <span>{cert.year}</span>
                         </div>

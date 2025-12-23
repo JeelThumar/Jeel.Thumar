@@ -74,7 +74,7 @@ const Work = ({ limit }) => {
                                             </div>
                                             <h3 className="text-3xl font-bold font-syne leading-none text-black">{project.title}</h3>
                                         </div>
-                                        <span className="font-mono text-sm text-black/40">{project.year}</span>
+                                        <span className="font-mono text-sm text-black/60">{project.year}</span>
                                     </div>
                                 </motion.div>
                             </Link>
@@ -109,11 +109,11 @@ const Work = ({ limit }) => {
                                         <div className="p-3 bg-white rounded-full border border-black/5 group-hover:scale-110 transition-transform">
                                             <ArrowUpRight size={20} className="text-black/60 group-hover:text-black" />
                                         </div>
-                                        <span className="font-mono text-sm text-black/40">{work.year}</span>
+                                        <span className="font-mono text-sm text-black/60">{work.year}</span>
                                     </div>
                                     <h4 className="text-2xl font-bold font-syne mb-2 group-hover:underline decoration-1 underline-offset-4">{work.title}</h4>
                                     <p className="text-black/60 font-light mb-4">{work.category}</p>
-                                    <p className="text-sm text-black/40 line-clamp-2">{work.description}</p>
+                                    <p className="text-sm text-black/60 line-clamp-2">{work.description}</p>
                                 </a>
                             ))}
                         </div>
