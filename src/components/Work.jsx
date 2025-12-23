@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 
-import { projects } from '../data';
+import { projects, moreWork } from '../data';
 
 import { useRef } from 'react';
 import { useSpotlightColor } from '../context/SpotlightContext';
@@ -90,6 +90,33 @@ const Work = ({ limit }) => {
                                 <ArrowUpRight size={20} className="group-hover:rotate-45 transition-transform duration-300" />
                             </div>
                         </Link>
+                    </div>
+                )}
+
+                {!limit && moreWork.length > 0 && (
+                    <div className="mt-32">
+                        <h3 className="text-4xl font-syne font-bold mb-12">More Work</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {moreWork.map((work) => (
+                                <a
+                                    key={work.id}
+                                    href={work.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group block bg-gray-50 p-8 rounded-2xl hover:bg-gray-100 transition-colors border border-black/5"
+                                >
+                                    <div className="flex justify-between items-start mb-6">
+                                        <div className="p-3 bg-white rounded-full border border-black/5 group-hover:scale-110 transition-transform">
+                                            <ArrowUpRight size={20} className="text-black/60 group-hover:text-black" />
+                                        </div>
+                                        <span className="font-mono text-sm text-black/40">{work.year}</span>
+                                    </div>
+                                    <h4 className="text-2xl font-bold font-syne mb-2 group-hover:underline decoration-1 underline-offset-4">{work.title}</h4>
+                                    <p className="text-black/60 font-light mb-4">{work.category}</p>
+                                    <p className="text-sm text-black/40 line-clamp-2">{work.description}</p>
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>

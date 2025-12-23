@@ -3,6 +3,59 @@ import { Linkedin, Instagram, Car, Trophy, Cpu, Figma } from 'lucide-react';
 
 export const projects = [
     {
+        id: "weather-app-brochure",
+        title: "Just Goi - Weather App Brochure",
+        category: "Print & Brand",
+        year: "2023",
+        img: "https://cdn.dribbble.com/userupload/12542918/file/original-6a77da5e9ee99e7f6ba1bbf46ba366e1.png?resize=1440x1024",
+        rotation: 2,
+        description: "A promotional brochure design for 'Just Goi', a weather application, blending digital aesthetics with print layout. The design challenges standard brochure grids by incorporating mobile UI elements directly into the print format, creating a seamless bridge between the physical advertisement and the digital product.",
+        images: [
+            "https://cdn.dribbble.com/userupload/12542918/file/original-6a77da5e9ee99e7f6ba1bbf46ba366e1.png?resize=1440x1024"
+        ],
+        tech: ["Figma", "Print Design", "Branding", "Marketing"]
+    },
+    {
+        id: "design-product",
+        title: "Product Design Exploration",
+        category: "Product Design",
+        year: "2023",
+        img: "https://cdn.dribbble.com/userupload/12544152/file/original-8edef780f9084222e9c59ee1e96e63b4.png?resize=1440x1024",
+        rotation: -2,
+        description: "Explaining the nuances of product design thinking through visual storytelling and bold layout choices. This piece serves as both a portfolio highlight and an educational resource, breaking down the 'Double Diamond' design process into digestible visual metaphors.",
+        images: [
+            "https://cdn.dribbble.com/userupload/12544152/file/original-8edef780f9084222e9c59ee1e96e63b4.png?resize=1440x1024"
+        ],
+        tech: ["Figma", "Product Thinking", "Storytelling"]
+    },
+    {
+        id: "icon-temple",
+        title: "Icon - Temple Theme",
+        category: "Iconography",
+        year: "2024",
+        img: "/images/icon-temple/1.png",
+        rotation: 3,
+        description: "A custom icon set inspired by spiritual and temple architectural elements, focusing on line weight and clarity. Each icon is crafted on a 24px grid with consistent stroke width and rounded terminals to ensure legibility at small sizes while maintaining cultural authenticity.",
+        images: [
+            "/images/icon-temple/1.png"
+        ],
+        tech: ["Illustrator", "Icon Design", "Vector"]
+    },
+    {
+        id: "testimonial-design",
+        title: "Testimonial Design",
+        category: "UI Components",
+        year: "2024",
+        img: "/images/testimonial-design/1.png",
+        rotation: -1,
+        description: "A study in trust and layout. Designing clean, readable, and persuasive testimonial sections for landing pages. This exploration experiments with grid breaks, typography hierarchy, and the effective use of customer avatars to increase social proof conversion rates.",
+        images: [
+            "/images/testimonial-design/1.png",
+            "/images/testimonial-design/2.png"
+        ],
+        tech: ["Figma", "UI Design", "Layout", "Conversion"]
+    },
+    {
         id: "consistency-tracker",
         title: "Consistency Tracker",
         category: "Web App",
@@ -17,39 +70,20 @@ export const projects = [
         tech: ["React", "TailwindCSS", "Framer Motion", "Vite"]
     },
     {
-        id: "match-mantra",
-        title: "Designing Connections that Matter – Match Mantra 💍",
-        category: "UI/UX Design",
+        id: "elevating-ux",
+        title: "Elevating User Experience: A Modern UI Design for Digital Tran",
+        category: "Product Design",
         year: "2025",
-        img: "/images/match-mantra/1.png",
-        rotation: -2,
-        description: "Love is not found. It is summoned. A modern take on tradition — here’s my latest design for Match Mantra, a premium matchmaking experience built around meaningful Indian connections.\n\nFrom storytelling to structure, every screen is crafted with clarity, elegance, and purpose.\n\n🔸 Clean brand system with rooted Indian tones\n\n🔸 Emotion-first layout — trust before profile\n\n🔸 Simplified flows to reflect exclusivity\n\nThis was one of those projects where design felt natural — smooth decisions, refined palettes, and pixel-level precision.\n\nAlways open to thoughts, feedback, or just a design chat.\n\nFeel free to ask anything! 😊",
+        img: "/images/elevating-ux/1.png",
+        rotation: 2,
+        description: "🚀 Excited to share my latest UI design for a cutting-edge software company! This website is crafted to showcase their work with a modern, minimalistic aesthetic, focusing on clean lines and smooth animations for an immersive user experience. Designed to accelerate digital transformation, the portfolio highlights the company’s key projects in web and mobile applications. The visual concept blends simplicity with creativity, ensuring both elegance and functionality. Looking forward to hearing your thoughts on this design!",
         images: [
-            {
-                type: "grid-2",
-                items: [
-                    "/images/match-mantra/1.png",
-                    "/images/match-mantra/2.png"
-                ]
-            },
-            "/images/match-mantra/3.png",
-            "/images/match-mantra/4.png"
+            "/images/elevating-ux/1.png",
+            "/images/elevating-ux/2.png",
+            "/images/elevating-ux/3.png",
+            "/images/elevating-ux/4.png"
         ],
-        tech: ["Figma", "UI Design", "Mobile Design", "Branding"]
-    },
-    {
-        id: "god-is-designer",
-        title: "God is Designer X Mercedes Benz",
-        category: "Brand Design",
-        year: "2025",
-        img: "/images/god-is-designer/desktop.png",
-        rotation: 1,
-        description: "Wallpaper for Mobile & Desktop for Mercedes Lover",
-        images: [
-            "/images/god-is-designer/desktop.png",
-            "/images/god-is-designer/mobile.png"
-        ],
-        tech: ["Figma", "Photoshop", "Brand Identity", "Art Direction"]
+        tech: ["Figma", "SaaS", "Dashboard", "Prototyping"]
     },
     {
         id: "serene-escape",
@@ -71,73 +105,39 @@ export const projects = [
         tech: ["Figma", "Web Design", "Minimalism", "UX"]
     },
     {
-        id: "elevating-ux",
-        title: "Elevating User Experience: A Modern UI Design for Digital Tran",
-        category: "Product Design",
+        id: "god-is-designer",
+        title: "God is Designer X Mercedes Benz",
+        category: "Brand Design",
         year: "2025",
-        img: "/images/elevating-ux/1.png",
-        rotation: 2,
-        description: "🚀 Excited to share my latest UI design for a cutting-edge software company! This website is crafted to showcase their work with a modern, minimalistic aesthetic, focusing on clean lines and smooth animations for an immersive user experience. Designed to accelerate digital transformation, the portfolio highlights the company’s key projects in web and mobile applications. The visual concept blends simplicity with creativity, ensuring both elegance and functionality. Looking forward to hearing your thoughts on this design!",
+        img: "/images/god-is-designer/desktop.png",
+        rotation: 1,
+        description: "Wallpaper for Mobile & Desktop for Mercedes Lover",
         images: [
-            "/images/elevating-ux/1.png",
-            "/images/elevating-ux/2.png",
-            "/images/elevating-ux/3.png",
-            "/images/elevating-ux/4.png"
+            "/images/god-is-designer/desktop.png",
+            "/images/god-is-designer/mobile.png"
         ],
-        tech: ["Figma", "SaaS", "Dashboard", "Prototyping"]
+        tech: ["Figma", "Photoshop", "Brand Identity", "Art Direction"]
     },
     {
-        id: "testimonial-design",
-        title: "Testimonial Design",
-        category: "UI Components",
-        year: "2024",
-        img: "/images/testimonial-design/1.png",
-        rotation: -1,
-        description: "A study in trust and layout. Designing clean, readable, and persuasive testimonial sections for landing pages. This exploration experiments with grid breaks, typography hierarchy, and the effective use of customer avatars to increase social proof conversion rates.",
-        images: [
-            "/images/testimonial-design/1.png",
-            "/images/testimonial-design/2.png"
-        ],
-        tech: ["Figma", "UI Design", "Layout", "Conversion"]
-    },
-    {
-        id: "icon-temple",
-        title: "Icon - Temple Theme",
-        category: "Iconography",
-        year: "2024",
-        img: "/images/icon-temple/1.png",
-        rotation: 3,
-        description: "A custom icon set inspired by spiritual and temple architectural elements, focusing on line weight and clarity. Each icon is crafted on a 24px grid with consistent stroke width and rounded terminals to ensure legibility at small sizes while maintaining cultural authenticity.",
-        images: [
-            "/images/icon-temple/1.png"
-        ],
-        tech: ["Illustrator", "Icon Design", "Vector"]
-    },
-    {
-        id: "design-product",
-        title: "Product Design Exploration",
-        category: "Product Design",
-        year: "2023",
-        img: "https://cdn.dribbble.com/userupload/12544152/file/original-8edef780f9084222e9c59ee1e96e63b4.png?resize=1440x1024",
+        id: "match-mantra",
+        title: "Designing Connections that Matter – Match Mantra 💍",
+        category: "UI/UX Design",
+        year: "2025",
+        img: "/images/match-mantra/1.png",
         rotation: -2,
-        description: "Explaining the nuances of product design thinking through visual storytelling and bold layout choices. This piece serves as both a portfolio highlight and an educational resource, breaking down the 'Double Diamond' design process into digestible visual metaphors.",
+        description: "Love is not found. It is summoned. A modern take on tradition — here’s my latest design for Match Mantra, a premium matchmaking experience built around meaningful Indian connections.\n\nFrom storytelling to structure, every screen is crafted with clarity, elegance, and purpose.\n\n🔸 Clean brand system with rooted Indian tones\n\n🔸 Emotion-first layout — trust before profile\n\n🔸 Simplified flows to reflect exclusivity\n\nThis was one of those projects where design felt natural — smooth decisions, refined palettes, and pixel-level precision.\n\nAlways open to thoughts, feedback, or just a design chat.\n\nFeel free to ask anything! 😊",
         images: [
-            "https://cdn.dribbble.com/userupload/12544152/file/original-8edef780f9084222e9c59ee1e96e63b4.png?resize=1440x1024"
+            {
+                type: "grid-2",
+                items: [
+                    "/images/match-mantra/1.png",
+                    "/images/match-mantra/2.png"
+                ]
+            },
+            "/images/match-mantra/3.png",
+            "/images/match-mantra/4.png"
         ],
-        tech: ["Figma", "Product Thinking", "Storytelling"]
-    },
-    {
-        id: "weather-app-brochure",
-        title: "Just Goi - Weather App Brochure",
-        category: "Print & Brand",
-        year: "2023",
-        img: "https://cdn.dribbble.com/userupload/12542918/file/original-6a77da5e9ee99e7f6ba1bbf46ba366e1.png?resize=1440x1024",
-        rotation: 2,
-        description: "A promotional brochure design for 'Just Goi', a weather application, blending digital aesthetics with print layout. The design challenges standard brochure grids by incorporating mobile UI elements directly into the print format, creating a seamless bridge between the physical advertisement and the digital product.",
-        images: [
-            "https://cdn.dribbble.com/userupload/12542918/file/original-6a77da5e9ee99e7f6ba1bbf46ba366e1.png?resize=1440x1024"
-        ],
-        tech: ["Figma", "Print Design", "Branding", "Marketing"]
+        tech: ["Figma", "UI Design", "Mobile Design", "Branding"]
     },
 ];
 
@@ -318,6 +318,25 @@ export const socials = [
 ];
 
 export const skills = ['UI/UX Design', 'Photo Editing', 'Figma', 'Framer', 'HTML/CSS'];
+
+export const moreWork = [
+    {
+        id: "grocery-app",
+        title: "Grocery App",
+        category: "Mobile Design",
+        year: "2024",
+        link: "https://www.figma.com/design/BBWxNkV9gc04woch365Zqp/Grocery-app?node-id=0-1&t=cruGHKC6Qh5OwCD6-1",
+        description: "A modern grocery shopping app design."
+    },
+    {
+        id: "vehicle-admin",
+        title: "Admin Dashboards",
+        category: "Dashboard Design",
+        year: "2024",
+        link: "https://www.figma.com/design/NUGG2kv1dIOTdWsghKAIRl/vehicle-admin?node-id=0-1&t=hpzOcVlYfrMgmrDN-1",
+        description: "Admin dashboard for E-Commerce & Vehicle Management (Mobile & Web)."
+    }
+];
 
 export const interests = [
     { label: 'Driving', color: 'bg-yellow-200', rotate: 'rotate-1', icon: Car },

@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 import { projects } from '../data';
 
@@ -17,9 +17,22 @@ const ProjectDetail = () => {
     return (
         <section className="min-h-screen py-32 px-6 md:px-12 bg-transparent text-black relative z-10">
             <div className="max-w-7xl mx-auto">
-                <Link to="/work" className="inline-flex items-center gap-2 text-black/60 hover:text-black mb-12 transition-colors">
-                    <ArrowLeft size={20} /> Back to Work
-                </Link>
+                <div className="flex justify-between items-center mb-12">
+                    <Link to="/work" className="inline-flex items-center gap-2 text-black/60 hover:text-black transition-colors">
+                        <ArrowLeft size={20} /> Back to Work
+                    </Link>
+
+                    {project.link && (
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full font-syne font-bold hover:bg-black/80 transition-colors"
+                        >
+                            View Design <ExternalLink size={18} />
+                        </a>
+                    )}
+                </div>
 
                 <motion.h1
                     initial={{ opacity: 0, y: 50 }}
