@@ -61,7 +61,7 @@ const Contact = () => {
             </Sticker>
 
             <Sticker className="top-[0%] left-[5%] text-black z-20" rotation={-10}>
-                <div className="bg-purple-500 text-white font-bold text-xs p-2 rounded shadow-[2px_2px_0px_0px_#000]">
+                <div className="bg-purple-700 text-white font-bold text-xs p-2 rounded shadow-[2px_2px_0px_0px_#000]">
                     OPEN FOR WORK
                 </div>
             </Sticker>
@@ -118,7 +118,7 @@ const Contact = () => {
                                         <p className="text-black/60 font-medium">I'll get back to you sooner than you think!</p>
                                         <button
                                             onClick={() => setStatus('idle')}
-                                            className="mt-6 text-sm underline text-black/40 hover:text-black hover:no-underline transition-colors block"
+                                            className="mt-6 text-sm underline text-black/60 hover:text-black hover:no-underline transition-colors block"
                                         >
                                             Send another message
                                         </button>
@@ -140,7 +140,7 @@ const Contact = () => {
 
                                         {/* Name Input */}
                                         <div className="relative group">
-                                            <label className="block font-mono text-xs text-black/40 mb-1 uppercase tracking-widest">Who are you?</label>
+                                            <label className="block font-mono text-xs text-black/60 mb-1 uppercase tracking-widest">Who are you?</label>
                                             <input
                                                 type="text"
                                                 name="name"
@@ -154,7 +154,7 @@ const Contact = () => {
 
                                         {/* Email Input */}
                                         <div className="relative group">
-                                            <label className="block font-mono text-xs text-black/40 mb-1 uppercase tracking-widest">Your Email?</label>
+                                            <label className="block font-mono text-xs text-black/60 mb-1 uppercase tracking-widest">Your Email?</label>
                                             <input
                                                 type="email"
                                                 name="email"
@@ -168,7 +168,7 @@ const Contact = () => {
 
                                         {/* Message Input */}
                                         <div className="relative group">
-                                            <label className="block font-mono text-xs text-black/40 mb-1 uppercase tracking-widest">What's the plan?</label>
+                                            <label className="block font-mono text-xs text-black/60 mb-1 uppercase tracking-widest">What's the plan?</label>
                                             <textarea
                                                 name="message"
                                                 value={formData.message}
@@ -204,7 +204,7 @@ const Contact = () => {
 
                         {/* Mobile Socials */}
                         <div className="md:hidden mt-8 flex flex-col items-center">
-                            <p className="font-mono text-xs text-black/40 mb-4 uppercase tracking-widest">Connect with me</p>
+                            <p className="font-mono text-xs text-black/60 mb-4 uppercase tracking-widest">Connect with me</p>
                             <Socials />
                         </div>
                     </div>
@@ -213,7 +213,7 @@ const Contact = () => {
 
                 {/* Footer */}
                 <div className="mt-8 text-center">
-                    <p className="font-mono text-black/30 text-[11px] uppercase tracking-widest">
+                    <p className="font-mono text-black/60 text-[11px] uppercase tracking-widest">
                         © {new Date().getFullYear()} Jeel Thumar. All rights reserved. <br />
                         Designed & Built with 💛
                     </p>
