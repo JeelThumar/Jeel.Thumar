@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Socials from './Socials';
 import Sticker from './Sticker';
-import { Send, CheckCircle2, Loader2, Sparkles } from 'lucide-react';
+import { Send, CheckCircle2, Loader2, Sparkles, Calendar } from 'lucide-react';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -93,6 +93,16 @@ const Contact = () => {
                                     Have an idea? I'd love to help you bring it to life. Reach out and let's make something awesome together!
                                 </p>
                             </div>
+
+                            <a
+                                href="https://calendar.app.google/BJ74XypnEoatDzvZ8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 self-start text-sm font-syne font-bold uppercase tracking-wider text-black/60 hover:text-purple-600 transition-colors border-b border-black/20 hover:border-purple-600 pb-1 my-6"
+                            >
+                                <Calendar size={18} />
+                                Book a Free Meeting With Me
+                            </a>
 
                             <div className="hidden md:block">
                                 <p className="font-mono text-xs text-black/60 mb-4 uppercase tracking-widest">Connect with me</p>
