@@ -330,7 +330,7 @@ export const moreWork = [
     },
     {
         id: "vehicle-admin",
-        title: "Admin Dashboards",
+        title: "Admin Dashboard Designs",
         category: "Dashboard Design",
         year: "2024",
         link: "https://www.figma.com/design/NUGG2kv1dIOTdWsghKAIRl/vehicle-admin?node-id=0-1&t=hpzOcVlYfrMgmrDN-1",
