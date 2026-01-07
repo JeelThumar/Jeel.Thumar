@@ -326,7 +326,7 @@ export const moreWork = [
         category: "Mobile Design",
         year: "2024",
         link: "https://www.figma.com/design/BBWxNkV9gc04woch365Zqp/Grocery-app?node-id=0-1&t=cruGHKC6Qh5OwCD6-1",
-        description: "A modern Shopping, Rider, E-Commerce & ect. app design."
+        description: "A modern Shopping, Health care, Rider, E-Commerce & ect. app design."
     },
     {
         id: "vehicle-admin",
