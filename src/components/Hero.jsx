@@ -13,19 +13,19 @@ const Hero = () => {
     const handleDownload = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('/Jeel-Thumar-Resume.pdf');
+            const response = await fetch('/Jeel-Thumar-CV.pdf');
             const blob = await response.blob();
             const url = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = 'Jeel-Thumar-Resume.pdf';
+            link.download = 'Jeel-Thumar-CV.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
             window.URL.revokeObjectURL(url);
         } catch (error) {
             console.error('Download failed:', error);
-            window.location.href = '/Jeel-Thumar-Resume.pdf';
+            window.location.href = '/Jeel-Thumar-CV.pdf';
         }
     };
 
@@ -149,7 +149,7 @@ const Hero = () => {
                         transition={{ delay: 1.8 }}
                     >
                         <motion.a
-                            href="/Jeel-Thumar-Resume.pdf"
+                            href="/Jeel-Thumar-CV.pdf"
                             onClick={handleDownload}
                             className="relative inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 bg-white text-black border-2 border-black rounded-lg font-bold font-syne uppercase tracking-wide cursor-pointer overflow-hidden group"
                             whileHover={{
