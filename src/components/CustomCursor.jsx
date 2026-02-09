@@ -7,6 +7,10 @@ const CustomCursor = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        // Detect touch device
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if (isTouchDevice) return;
+
         const updateMousePosition = (e) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
             if (!isVisible) setIsVisible(true);
@@ -35,6 +39,11 @@ const CustomCursor = () => {
             document.removeEventListener('mouseleave', handleMouseLeave);
         };
     }, [isVisible]);
+
+    // Don't render anything on touch devices
+    if (typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
+        return null;
+    }
 
     return (
         <motion.div

@@ -302,7 +302,7 @@ export const socials = [
     },
     {
         platform: 'Instagram',
-        url: 'https://www.instagram.com/justt.jeel/',
+        url: 'https://www.instagram.com/justt.jeel',
         icon: Instagram
     },
     {
