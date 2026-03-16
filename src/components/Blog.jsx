@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-import { blogPosts } from '../data';
+import { useCollectionData } from '../hooks/useCollectionData';
+import { blogPosts as fallbackBlogPosts } from '../data';
 
 import { useState, useEffect, useRef } from 'react';
 import { useSpotlightColor } from '../context/SpotlightContext';
@@ -15,6 +16,8 @@ const Blog = ({ limit }) => {
 
     const sectionRef = useRef(null);
     useSpotlightColor("#eab308", sectionRef);
+
+    const { data: blogPosts } = useCollectionData("blogPosts", fallbackBlogPosts);
 
     // Reverse posts to show newest first, then slice if limit exists
     const displayPosts = [...blogPosts].reverse().slice(0, limit || blogPosts.length);

@@ -1,14 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { stats, marqueeItems } from '../data';
+import { useSiteData } from '../hooks/useSiteData';
 
 const Stats = () => {
+    const { data } = useSiteData();
+
     return (
         <section className="w-full bg-white text-black border-y border-black overflow-hidden relative">
             {/* Stats Grid */}
             <div className="max-w-[1400px] mx-auto px-2 lg:px-0">
                 <div className="grid grid-cols-4 divide-x divide-black/10">
-                    {stats.map((stat, index) => (
+                    {data.stats.map((stat, index) => (
                         <div key={index} className="flex flex-col items-center justify-center py-6 sm:py-8 md:py-16 px-1">
                             <h3 className="text-2xl sm:text-4xl md:text-6xl font-syne font-black tracking-tighter mix-blend-normal">
                                 {stat.value}<span className="text-purple-500">{stat.suffix}</span>
@@ -33,7 +35,7 @@ const Stats = () => {
                     }}
                 >
                     {/* Double the array for seamless loop */}
-                    {[...marqueeItems, ...marqueeItems].map((item, index) => (
+                    {[...data.marqueeItems, ...data.marqueeItems].map((item, index) => (
                         <div key={index} className="flex items-center space-x-8 shrink-0">
                             <span className="text-white text-[10px] md:text-sm font-syne font-semibold tracking-widest uppercase">
                                 {item}

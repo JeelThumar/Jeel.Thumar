@@ -1,11 +1,18 @@
-import { socials } from '../data';
-import { Linkedin } from 'lucide-react';
+import { useSiteData } from '../hooks/useSiteData';
+import { Linkedin, Instagram, Figma } from 'lucide-react';
+
+const getIcon = (iconName) => {
+    const icons = { Linkedin, Instagram, Figma };
+    return icons[iconName] || null;
+};
 
 const Socials = () => {
+    const { data } = useSiteData();
+
     return (
         <div className="flex gap-6 mt-8">
-            {socials.map((social, index) => {
-                const Icon = social.icon;
+            {data.socials.map((social, index) => {
+                const Icon = getIcon(social.icon);
                 return (
                     <a
                         key={index}

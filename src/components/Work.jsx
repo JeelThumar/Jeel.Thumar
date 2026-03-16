@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 
-import { projects, moreWork } from '../data';
+import { useCollectionData } from '../hooks/useCollectionData';
+import { projects as fallbackProjects, moreWork as fallbackMoreWork } from '../data';
 
 import { useRef } from 'react';
 import { useSpotlightColor } from '../context/SpotlightContext';
@@ -11,6 +12,9 @@ import { useSpotlightColor } from '../context/SpotlightContext';
 const Work = ({ limit }) => {
     const sectionRef = useRef(null);
     useSpotlightColor("#3b82f6", sectionRef);
+
+    const { data: projects } = useCollectionData("projects", fallbackProjects);
+    const { data: moreWork } = useCollectionData("moreWork", fallbackMoreWork);
 
     // Reverse projects to show newest first, then slice if limit exists
     const displayProjects = [...projects].reverse().slice(0, limit || projects.length);

@@ -5,10 +5,12 @@ import { Star, Sparkles, Zap, ArrowDownToLine } from 'lucide-react';
 
 import { useRef } from 'react';
 import { useSpotlightColor } from '../context/SpotlightContext';
+import { useSiteData } from '../hooks/useSiteData';
 
 const Hero = () => {
     const sectionRef = useRef(null);
     useSpotlightColor("#a855f7", sectionRef);
+    const { data } = useSiteData();
 
     const handleDownload = async (e) => {
         e.preventDefault();
@@ -82,7 +84,7 @@ const Hero = () => {
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         className="w-full flex justify-center"
                     >
-                        <h1 className="text-[18vw] sm:text-7xl md:text-9xl lg:text-[200px] font-black font-syne leading-[0.8] tracking-[-0.02em] mix-blend-normal uppercase">
+                        <h1 className="text-[18vw] sm:text-7xl md:text-9xl lg:text-[150px] font-black font-syne leading-[0.8] tracking-[-0.02em] mix-blend-normal uppercase">
                             JEEL
                         </h1>
                     </motion.div>
@@ -91,7 +93,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.5 }}
-                        className="text-[5.5vw] sm:text-3xl md:text-5xl lg:text-[72px] font-syne font-black uppercase leading-[1.6] tracking-normal flex items-center justify-center -mt-1 sm:-mt-2 md:-mt-4 w-full"
+                        className="text-[5.5vw] sm:text-3xl md:text-5xl lg:text-[62px] font-syne font-black uppercase leading-[1.6] tracking-normal flex items-center justify-center -mt-1 sm:-mt-2 md:-mt-4 w-full"
                     >
                         UI/<span className="text-transparent [-webkit-text-stroke:1px_#c084fc] md:[-webkit-text-stroke:2px_#c084fc]">UX</span>&nbsp;DESIGNER
                     </motion.h2>
@@ -105,9 +107,10 @@ const Hero = () => {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="mt-10 md:mt-12 space-y-10"
                 >
-                    <p className="text-base md:text-[1.35rem] font-montserrat font-medium text-black/60 max-w-3xl mx-auto leading-relaxed px-4">
-                        I'm <span className="font-bold text-black font-syne text-[115%]">Jeel Thumar</span> — a UI/UX designer focused on creating great user experiences that help organisations grow. My background in editing complements my design skills, balancing <span className="font-bold text-black">aesthetics</span> with <span className="font-bold text-black">functionality</span>.
-                    </p>
+                    <div 
+                        className="text-base md:text-[1.35rem] font-montserrat font-medium text-black/60 max-w-3xl mx-auto leading-relaxed px-4 [&>strong]:text-black [&>strong]:font-bold [&>strong]:font-syne [&>strong]:text-[115%]"
+                        dangerouslySetInnerHTML={{ __html: data.heroBio || "I'm <strong>Jeel Thumar</strong> — a UI/UX designer focused on creating great user experiences that help organisations grow. My background in editing complements my design skills, balancing <strong>aesthetics</strong> with <strong>functionality</strong>." }}
+                    />
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

@@ -1,12 +1,16 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
-import { blogPosts } from '../data';
-import { useEffect } from 'react';
+import { useCollectionData } from '../hooks/useCollectionData';
+import { blogPosts as fallbackBlogPosts } from '../data';
+import { useEffect, useState } from 'react';
 
 const BlogPost = () => {
     const { id } = useParams();
-    const post = blogPosts.find(p => p.id === parseInt(id));
+    const { data: blogPosts } = useCollectionData("blogPosts", fallbackBlogPosts);
+    
+    // Support both string IDs from Firebase and int IDs from legacy fallback
+    const post = blogPosts.find(p => p.id.toString() === id.toString());
 
     useEffect(() => {
         window.scrollTo(0, 0);

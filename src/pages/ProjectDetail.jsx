@@ -3,14 +3,15 @@ import { motion } from 'framer-motion';
 
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
-import { projects } from '../data';
-
-// Helper to find project by ID since our data is an array now, not object
-const getProjectById = (id) => projects.find(p => p.id === id);
+import { useCollectionData } from '../hooks/useCollectionData';
+import { projects as fallbackProjects } from '../data';
 
 const ProjectDetail = () => {
     const { id } = useParams();
-    const project = getProjectById(id);
+    const { data: projects } = useCollectionData("projects", fallbackProjects);
+    
+    // Support both string IDs from Firebase and legacy
+    const project = projects.find(p => p.id.toString() === id.toString());
 
     if (!project) return <div className="h-screen flex items-center justify-center text-black">Project not found</div>;
 

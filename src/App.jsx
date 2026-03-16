@@ -7,6 +7,8 @@ import ProjectDetail from './pages/ProjectDetail';
 import WorkPage from './pages/WorkPage';
 import BlogPage from './pages/BlogPage';
 import BlogPost from './pages/BlogPost';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 
 import Loader from './components/Loader';
 
@@ -23,12 +25,18 @@ function AppContent() {
           <Route path="project/:id" element={<ProjectDetail />} />
           <Route path="blog/:id" element={<BlogPost />} />
         </Route>
+        
+        {/* Admin Routes */}
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
       </Routes>
     </AnimatePresence>
   );
 }
 
 import { SpotlightProvider } from './context/SpotlightContext';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +44,7 @@ function App() {
   return (
     <SpotlightProvider>
       <BrowserRouter>
+        <Toaster position="top-center" reverseOrder={false} />
         <AnimatePresence mode="wait">
           {loading && <Loader onComplete={() => setLoading(false)} />}
         </AnimatePresence>

@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const CustomCursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+    
+    // Disable on admin routes where proper pointer UX is needed
+    const location = useLocation();
+    const isAdminRoute = location.pathname.startsWith('/admin');
 
     useEffect(() => {
         // Detect touch device
@@ -40,8 +45,8 @@ const CustomCursor = () => {
         };
     }, [isVisible]);
 
-    // Don't render anything on touch devices
-    if (typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
+    // Don't render anything on touch devices or admin routes
+    if (isAdminRoute || (typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0))) {
         return null;
     }
 

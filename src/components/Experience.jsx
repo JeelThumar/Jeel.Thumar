@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import { experiences } from '../data';
+import { useSiteData } from '../hooks/useSiteData';
 
 import { useRef } from 'react';
 import { useSpotlightColor } from '../context/SpotlightContext';
@@ -8,13 +8,14 @@ import { useSpotlightColor } from '../context/SpotlightContext';
 const Experience = () => {
     const sectionRef = useRef(null);
     useSpotlightColor("#10b981", sectionRef);
+    const { data } = useSiteData();
 
     return (
         <section ref={sectionRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
 
             <h2 className="text-4xl md:text-6xl font-syne font-bold mb-16">Experience</h2>
             <div className="relative border-l border-black/10 ml-4 md:ml-0 space-y-12">
-                {experiences.map((exp, index) => (
+                {data.experiences.map((exp, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
