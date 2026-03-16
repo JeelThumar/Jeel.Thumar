@@ -9,6 +9,7 @@ import {
     stats,
     experiences,
     education,
+    certifications,
     marqueeItems,
     socials
 } from '../data';
@@ -20,6 +21,7 @@ export const useSiteData = () => {
         stats,
         experiences,
         education,
+        certifications,
         marqueeItems,
         socials
     });
