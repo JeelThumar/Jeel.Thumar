@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import Stats from '../components/Stats';
 import Work from '../components/Work';
 
 import Experience from '../components/Experience';
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <>
             <Hero />
+            <Stats />
             <Work limit={4} />
             <Expertise />
             <Experience />

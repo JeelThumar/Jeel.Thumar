@@ -20,9 +20,15 @@ const Work = ({ limit }) => {
 
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-end mb-16 relative z-10">
-                    <h2 className="text-6xl md:text-8xl font-syne font-bold uppercase leading-[0.8] tracking-tighter">
-                        Selected <br /> <span className="text-transparent stroke-black [-webkit-text-stroke:1px_black]">Works</span>
-                    </h2>
+                    {limit ? (
+                        <h2 className="text-4xl md:text-6xl font-syne font-bold">
+                            Selected Works
+                        </h2>
+                    ) : (
+                        <h2 className="text-6xl md:text-8xl font-syne font-bold uppercase leading-[0.8] tracking-tighter">
+                            Selected <br className="hidden md:block"/> <span className="text-transparent stroke-black [-webkit-text-stroke:1px_black]">Works</span>
+                        </h2>
+                    )}
 
                     {limit && (
                         <Link to="/work" className="hidden md:flex items-center gap-2 group">

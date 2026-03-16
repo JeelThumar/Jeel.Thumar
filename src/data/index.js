@@ -325,7 +325,7 @@ export const moreWork = [
         title: "App Designs",
         category: "Mobile Design",
         year: "2024",
-        link: "https://www.figma.com/design/BBWxNkV9gc04woch365Zqp/Grocery-app?node-id=0-1&t=cruGHKC6Qh5OwCD6-1",
+        link: "https://www.figma.com/design/BBWxNkV9gc04woch365Zqp/apps?node-id=0-1&p=f&t=b96tim5MFfRHXzkV-0",
         description: "A modern Shopping, Health care, Rider, E-Commerce & ect. app design."
     },
     {
@@ -333,7 +333,7 @@ export const moreWork = [
         title: "Admin Dashboard Designs",
         category: "Dashboard Design",
         year: "2024",
-        link: "https://www.figma.com/design/NUGG2kv1dIOTdWsghKAIRl/vehicle-admin?node-id=0-1&t=hpzOcVlYfrMgmrDN-1",
+        link: "https://www.figma.com/design/NUGG2kv1dIOTdWsghKAIRl/admins-designs?node-id=0-1&p=f&t=4doG37iQFVOEQNi8-0",
         description: "Admin dashboard for E-Commerce & Vehicle Management (Mobile & Web)."
     }
 ];
@@ -342,4 +342,15 @@ export const interests = [
     { label: 'Driving', color: 'bg-yellow-200', rotate: 'rotate-1', icon: Car },
     { label: 'Badminton', color: 'bg-purple-200', rotate: '-rotate-1', icon: Trophy },
     { label: 'Tech', color: 'bg-pink-200', rotate: 'rotate-2', icon: Cpu }
+];
+
+export const stats = [
+    { value: "10", suffix: "+", label: "PROJECTS SHIPPED" },
+    { value: "4", suffix: "yr", label: "EXPERIENCE" },
+    { value: "9.", suffix: "02", label: "CGPA - B.TECH" },
+    { value: "4", suffix: "+", label: "CERTIFICATIONS" }
+];
+
+export const marqueeItems = [
+    "UI DESIGN", "UX DESIGN", "PHOTO EDITING", "FIGMA EXPERT", "FRAMER", "HTML - CSS", "DESIGN SYSTEMS", "PROTOTYPING", "BRAND DESIGN", "ICONOGRAPHY"
 ];

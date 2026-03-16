@@ -28,9 +28,13 @@ const Layout = () => {
                 setShowBackToTop(false);
             }
 
-            // Navbar visibility (hide only at the very bottom)
-            const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
-            setIsNavbarVisible(!isAtBottom);
+            // Navbar visibility (hide at bottom only on mobile)
+            if (window.innerWidth < 768) {
+                const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300;
+                setIsNavbarVisible(!isAtBottom);
+            } else {
+                setIsNavbarVisible(true);
+            }
         };
 
         window.addEventListener('scroll', handleScroll);

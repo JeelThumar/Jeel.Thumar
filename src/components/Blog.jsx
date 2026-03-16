@@ -31,9 +31,15 @@ const Blog = ({ limit }) => {
         <section ref={sectionRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
 
             <div className="flex justify-between items-end mb-16 relative z-10">
-                <h2 className="text-4xl md:text-8xl font-syne font-bold uppercase leading-[0.8] tracking-tighter mix-blend-difference text-black">
-                    Recent <br /> <span className="text-transparent stroke-black [-webkit-text-stroke:1px_black]">Thoughts</span>
-                </h2>
+                {limit ? (
+                    <h2 className="text-4xl md:text-6xl font-syne font-bold">
+                        Recent Thoughts
+                    </h2>
+                ) : (
+                    <h2 className="text-6xl md:text-8xl font-syne font-bold uppercase leading-[0.8] tracking-tighter mix-blend-difference text-black">
+                        Recent <br className="hidden md:block"/> <span className="text-transparent stroke-black [-webkit-text-stroke:1px_black]">Thoughts</span>
+                    </h2>
+                )}
 
                 {limit && (
                     <Link to="/blog" className="hidden md:flex items-center gap-2 group">

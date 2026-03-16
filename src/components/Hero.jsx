@@ -61,28 +61,41 @@ const Hero = () => {
             </Sticker>
 
 
-            <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto pt-0 md:pt-20">
+            <div className="relative z-10 text-center flex flex-col items-center max-w-5xl mx-auto pt-0 md:pt-20 px-4">
+                
+                {/* Location Badge */}
                 <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    className="border border-black/10 rounded-full px-4 md:px-6 py-1.5 md:py-2 flex items-center justify-center gap-2 md:gap-3 text-[8px] md:text-[10px] font-syne font-bold text-black/50 uppercase tracking-[0.2em] md:tracking-[0.3em] mb-6 md:mb-8 shadow-sm"
                 >
-                    <h1 className="text-[18vw] md:text-[10vw] font-bold font-syne leading-[0.85] tracking-tighter mix-blend-normal">
-                        JEEL
-                    </h1>
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-purple-400"></span>
+                    UI/UX DESIGNER &nbsp;&nbsp;&middot;&nbsp;&nbsp; AHMEDABAD, INDIA
                 </motion.div>
 
+                {/* Text Lockup Container to ensure perfect alignment */}
+                <div className="flex flex-col items-center w-full max-w-[1000px] mx-auto mt-2 px-2 sm:px-4 md:px-0">
+                    <motion.div
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                        className="w-full flex justify-center"
+                    >
+                        <h1 className="text-[18vw] sm:text-7xl md:text-9xl lg:text-[200px] font-black font-syne leading-[0.8] tracking-[-0.02em] mix-blend-normal uppercase">
+                            JEEL
+                        </h1>
+                    </motion.div>
 
-
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.5 }}
-                    className="mt-2 text-4xl md:text-6xl font-syne font-bold uppercase leading-[0.85] tracking-tighter"
-                >
-                    UI/UX <span className="text-transparent stroke-black [-webkit-text-stroke:1px_black]">Designer</span>
-                </motion.h2>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.5 }}
+                        className="text-[5.5vw] sm:text-3xl md:text-5xl lg:text-[72px] font-syne font-black uppercase leading-[1.6] tracking-normal flex items-center justify-center -mt-1 sm:-mt-2 md:-mt-4 w-full"
+                    >
+                        UI/<span className="text-transparent [-webkit-text-stroke:1px_#c084fc] md:[-webkit-text-stroke:2px_#c084fc]">UX</span>&nbsp;DESIGNER
+                    </motion.h2>
+                </div>
 
                 {/* About Content Merged Here */}
                 <motion.div
@@ -90,57 +103,11 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 0.8 }}
-                    className="mt-12 space-y-8"
+                    className="mt-10 md:mt-12 space-y-10"
                 >
-                    <div className="flex flex-wrap justify-center gap-x-[0.25em] text-2xl md:text-4xl font-syne font-bold leading-tight px-4">
-                        {/* Custom inline animation to handle mixed styling */}
-                        {("I’m").split(" ").map((word, i) => (
-                            <motion.span
-                                key={`start-${i}`}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.5 + i * 0.03, type: "spring", stiffness: 100, damping: 20 }}
-                                className="inline-block"
-                            >
-                                {word}
-                            </motion.span>
-                        ))}
-
-                        {/* Name with color */}
-                        {("Jeel Thumar.").split(" ").map((word, i) => (
-                            <motion.span
-                                key={`name-${i}`}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.6 + i * 0.03, type: "spring", stiffness: 100, damping: 20 }}
-                                className="inline-block text-purple-600"
-                            >
-                                {word}
-                            </motion.span>
-                        ))}
-
-                        {/* Rest of sentence */}
-                        {("A UI/UX Designer looking to create great user experiences and help organizations grow.").split(" ").map((word, i) => (
-                            <motion.span
-                                key={`end-${i}`}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.7 + i * 0.03, type: "spring", stiffness: 100, damping: 20 }}
-                                className="inline-block"
-                            >
-                                {word}
-                            </motion.span>
-                        ))}
-                    </div>
-
-                    <TextReveal
-                        text="My background in editing complements my design skills, allowing me to focus on both the aesthetics and functionality of every project."
-                        className="text-lg md:text-xl font-light text-black/60 max-w-2xl mx-auto leading-relaxed px-4"
-                        delay={1.5}
-                    />
+                    <p className="text-base md:text-[1.35rem] font-montserrat font-medium text-black/60 max-w-3xl mx-auto leading-relaxed px-4">
+                        I'm <span className="font-bold text-black font-syne text-[115%]">Jeel Thumar</span> — a UI/UX designer focused on creating great user experiences that help organisations grow. My background in editing complements my design skills, balancing <span className="font-bold text-black">aesthetics</span> with <span className="font-bold text-black">functionality</span>.
+                    </p>
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
