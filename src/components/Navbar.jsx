@@ -29,13 +29,13 @@ const Navbar = ({ isVisible }) => {
     return (
         <AnimatePresence>
             {isVisible && (
-                <div className="fixed bottom-6 md:bottom-8 md:top-auto md:left-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:translate-y-0 z-50 w-auto">
+                <div className="fixed bottom-6 md:bottom-auto md:top-8 left-1/2 -translate-x-1/2 z-50 w-auto">
                     <motion.nav
                         initial={{ y: -100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -100, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="flex md:flex-col items-center gap-2 p-2 bg-white/80 backdrop-blur-md border border-black/10 rounded-full shadow-lg"
+                        className="flex items-center gap-2 p-2 bg-white/80 backdrop-blur-md border border-black/10 rounded-full shadow-lg"
                     >
                         {navItems.map((item) => {
                             const isActive = location.pathname === item.path;
@@ -47,13 +47,11 @@ const Navbar = ({ isVisible }) => {
                                     <button
                                         key={item.label}
                                         onClick={item.onClick}
-                                        className="relative p-3 md:p-3.5 rounded-full transition-all group flex items-center justify-center text-black hover:bg-black/5 cursor-pointer"
+                                        className="relative px-4 py-2 rounded-full transition-all group flex items-center gap-2 text-black hover:bg-black/5 cursor-pointer"
                                         aria-label={item.label}
                                     >
-                                        <Icon size={20} />
-                                        <span className="absolute left-full ml-4 px-2 py-1 bg-black text-white text-xs font-syne font-bold uppercase rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block pointer-events-none">
-                                            {item.label}
-                                        </span>
+                                        <Icon size={18} />
+                                        <span className="text-sm font-medium hidden md:block">{item.label}</span>
                                     </button>
                                 );
                             }
@@ -62,16 +60,14 @@ const Navbar = ({ isVisible }) => {
                                 <Link
                                     key={item.path}
                                     to={item.path}
-                                    className={`relative p-3 md:p-3.5 rounded-full transition-all group flex items-center justify-center ${isActive
+                                    className={`relative px-4 py-2 rounded-full transition-all group flex items-center gap-2 ${isActive
                                         ? 'bg-black text-white'
                                         : 'text-black hover:bg-black/5'
                                         }`}
                                     aria-label={item.label}
                                 >
-                                    <Icon size={20} className="relative z-10" />
-                                    <span className="absolute left-full ml-4 px-2 py-1 bg-black text-white text-xs font-syne font-bold uppercase rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block pointer-events-none z-50">
-                                        {item.label}
-                                    </span>
+                                    <Icon size={18} />
+                                    <span className="text-sm font-medium hidden md:block">{item.label}</span>
                                     {isActive && (
                                         <motion.div
                                             layoutId="activeTab"
