@@ -341,7 +341,7 @@ const GeneralEditor = () => {
                 <h3 className="text-2xl font-bold font-syne mb-2 text-gray-900">Stats Configuration</h3>
                 <p className="text-sm text-black/50 mb-6">Update the numerical statistics shown below the Hero section.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {data.stats.map((stat, index) => (
+                    {(data.stats || []).map((stat, index) => (
                         <div key={index} className="space-y-3 p-5 bg-gray-50/50 rounded-xl border border-black/5 transition-colors hover:border-black/10">
                             <label className="text-xs font-bold text-black/40 uppercase tracking-widest">{stat.label}</label>
                             <div className="flex gap-3">
