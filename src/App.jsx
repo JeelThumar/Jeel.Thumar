@@ -9,6 +9,7 @@ import BlogPage from './pages/BlogPage';
 import BlogPost from './pages/BlogPost';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import NotFound from './pages/NotFound';
 
 import Loader from './components/Loader';
 
@@ -24,6 +25,9 @@ function AppContent() {
 
           <Route path="project/:id" element={<ProjectDetail />} />
           <Route path="blog/:id" element={<BlogPost />} />
+          
+          {/* 404 Route */}
+          <Route path="*" element={<NotFound />} />
         </Route>
         
         {/* Admin Routes */}
