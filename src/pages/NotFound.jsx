@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
 
 const NotFound = () => {
+    const { setIsNavbarPersistentHidden } = useOutletContext();
+
+    useEffect(() => {
+        setIsNavbarPersistentHidden(true);
+        return () => setIsNavbarPersistentHidden(false);
+    }, [setIsNavbarPersistentHidden]);
+
     return (
         <div className="h-screen flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
             {/* Animated Background Elements */}

@@ -15,6 +15,7 @@ import { useSpotlight } from '../context/SpotlightContext';
 const Layout = () => {
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
     const [showBackToTop, setShowBackToTop] = useState(false);
+    const [isNavbarPersistentHidden, setIsNavbarPersistentHidden] = useState(false);
     const location = useLocation();
     const lenis = useLenis();
     const { color } = useSpotlight();
@@ -72,9 +73,9 @@ const Layout = () => {
                 </div>
 
                 <GrainOverlay />
-                <Navbar isVisible={isNavbarVisible} />
+                <Navbar isVisible={isNavbarVisible && !isNavbarPersistentHidden} />
                 <main className="flex-grow">
-                    <Outlet />
+                    <Outlet context={{ setIsNavbarPersistentHidden }} />
                 </main>
                 <Contact />
 
