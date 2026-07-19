@@ -142,7 +142,8 @@ export const projects = [
 ];
 
 export const experiences = [
-    { year: 'Sep 2023 - Present', role: 'UI/UX Designer', company: 'Demaze Technology', location: 'Ahmedabad, India', description: 'Designing intuitive user interfaces and enhancing user experiences.' },
+    { year: 'Apr 2026 - Present', role: 'Product Designer', company: 'AMRYTT MEDIA LLC', location: 'Ahmedabad, India', description: 'Designing digital products, user interfaces, and engaging user experiences.' },
+    { year: 'Sep 2023 - Apr 2026', role: 'UI/UX Designer', company: 'Demaze Technology', location: 'Ahmedabad, India', description: 'Designing intuitive user interfaces and enhancing user experiences.' },
     { year: 'Jan 2021 - Present', role: 'Freelance UI/UX Designer', company: 'Self-Employed', location: 'Remote', description: 'Logo Design, Photo Editing, and creating custom UI solutions for diverse clients.' },
 ];
 
