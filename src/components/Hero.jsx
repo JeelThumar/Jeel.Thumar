@@ -153,6 +153,7 @@ const Hero = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
                         <motion.a
                             href={resumeUrl}
+                            download="Jeel_Thumar_Resume.pdf"
                             onClick={handleDownload}
                             className="w-full sm:w-auto relative inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 bg-white text-black border-2 border-black rounded-lg font-bold font-syne uppercase tracking-wide cursor-pointer overflow-hidden group"
                             whileHover={{
