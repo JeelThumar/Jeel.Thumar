@@ -2,6 +2,7 @@ import { Linkedin, Instagram, Car, Trophy, Cpu, Figma, Dribbble, Compass, Utensi
 import {
     profile,
     coreCompetencies,
+    tools,
     capabilityPillars,
     coreProjects,
     liveWebsites
@@ -11,6 +12,7 @@ import { caseStudies, upcomingCaseStudies } from './caseStudies';
 export {
     profile,
     coreCompetencies,
+    tools,
     capabilityPillars,
     coreProjects,
     liveWebsites,
@@ -160,42 +162,44 @@ export const projects = [
 
 export const experiences = [
     {
-        year: "April 2026 – October 2026",
+        year: "Apr 2026 – Oct 2026",
         role: "Product Designer",
         company: "Amrytt Media LLC",
         location: "Ahmedabad, India",
         description:
-            "Led the redesign of the core GuestPostLinks platform and administrative operations while collaborating directly with the CEO/Founder.",
+            "Design and improve the GUESTPOSTLINKS website and admin-panel experiences while collaborating directly with the CEO/founder.",
         highlights: [
-            "Led the redesign of the core GuestPostLinks platform and administrative operations.",
-            "Collaborated directly with the CEO/Founder on feature definitions, roadmaps, and delivery schedules.",
-            "Formulated systematic UI component libraries to unify 50+ internal operational tools."
+            "Design and improve the GUESTPOSTLINKS website, a guest-post and backlink placement platform, creating clear, user-focused journeys for discovering publishers and placing orders.",
+            "Design the platform website and admin-panel experiences, translating product and operational requirements into intuitive interfaces and workflows.",
+            "Collaborate directly with the CEO/founder on product requirements, priorities, design decisions and delivery, aligning the platform experience with business goals."
         ]
     },
     {
-        year: "September 2023 – April 2026",
+        year: "Sep 2023 – Apr 2026",
         role: "UI/UX Designer",
         company: "Demaze Technology",
         location: "Ahmedabad, India",
         description:
-            "Designed multi-platform web and mobile experiences across EdTech, automotive, quick commerce, and business services.",
+            "Designed web and mobile experiences across education, automotive, e-commerce, quick commerce and business services.",
         highlights: [
-            "Designed multi-platform web and mobile experiences across EdTech, automotive, quick commerce, and business services.",
-            "Created wireframes, high-fidelity prototypes, and multi-role administrative consoles.",
-            "Directed marketing visuals, branding assets, and promotional design collateral.",
-            "Reported directly to the CEO/Founder to translate client briefs into shipped products."
+            "Designed web and mobile experiences across multiple industries, including education, automotive, e-commerce, quick commerce and business services.",
+            "Created user interfaces, wireframes, prototypes, admin dashboards and multi-role workflows for customer-facing and operational products.",
+            "Worked extensively on graphic design, including social media creatives, promotional banners, marketing materials, branding assets and visual communication.",
+            "Collaborated directly with the CEO/founder, contributing to business discussions, stakeholder requirements, project planning and design delivery.",
+            "Applied brand guidelines and design principles to create consistent, engaging and responsive digital and visual experiences."
         ]
     },
     {
-        year: "January 2021 – Present",
-        role: "Independent Designer",
-        company: "Freelance UI/UX & Graphic Designer",
-        location: "Remote / Global",
+        year: "Jan 2021 – Present",
+        role: "Freelance UI/UX & Graphic Designer, Logo Designer & Photo Editor",
+        company: "Independent / Remote",
+        location: "Remote",
         description:
-            "Shipped custom web designs, digital products, brand identities, and visual assets for diverse businesses.",
+            "Deliver creative design solutions across websites, digital products, graphic design, logo design, photo editing and visual communication.",
         highlights: [
-            "Shipped custom web designs, digital products, brand identities, and visual assets for diverse businesses.",
-            "End-to-end client engagement: scoping, discovery, wireframing, client revisions, and asset handoff."
+            "Deliver creative design solutions across websites, digital products, graphic design, logo design, photo editing and visual communication.",
+            "Create social media creatives, marketing materials, promotional graphics, logos and brand-focused visual content for businesses across different industries.",
+            "Manage freelance projects and client communication from initial brief and creative concept through revisions and final delivery."
         ]
     }
 ];
@@ -203,22 +207,24 @@ export const experiences = [
 export const education = [
     {
         school: "Silver Oak University",
-        degree: "Bachelor of Technology (B.Tech) in Computer Engineering",
+        degree: "B.Tech, Computer Engineering",
+        location: "Ahmedabad, Gujarat, India",
         year: "Aug 2021 – Jun 2025",
         grade: "CGPA: 9.02 / 10"
     },
     {
         school: "Tapovan Group of School",
-        degree: "Higher Secondary Certificate (12th Grade)",
+        degree: "12th (Higher Secondary)",
+        location: "Surat, Gujarat, India",
         year: "2020 – 2021",
-        grade: "Score: 74.6%"
+        grade: "Percentage: 74.6%"
     }
 ];
 
 export const certifications = [
     {
         title: "Foundations of User Experience (UX) Design",
-        issuer: "Google | Coursera",
+        issuer: "Google · Coursera",
         year: "2025",
         link: "https://www.coursera.org/account/accomplishments/verify/UMJCPWJ6QJBE"
     },
@@ -230,7 +236,7 @@ export const certifications = [
     },
     {
         title: "Coding Fundamentals",
-        issuer: "Google Grasshopper",
+        issuer: "Google",
         year: "2022",
         link: "https://www.linkedin.com/posts/jeelthumar_google-grasshopper-activity-7084604020706709504-cINN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADh2xs0BtML7xB0tRbwwjsHIz3CikQjqBxY"
     },

@@ -6,6 +6,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import {
     profile,
     coreCompetencies,
+    tools,
     capabilityPillars,
     coreProjects,
     liveWebsites,
@@ -27,6 +28,7 @@ export const useSiteData = () => {
         profile,
         heroBio: profile.heroBio,
         coreCompetencies,
+        tools,
         capabilityPillars,
         coreProjects,
         liveWebsites,

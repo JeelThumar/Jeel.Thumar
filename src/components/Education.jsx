@@ -26,8 +26,11 @@ const Education = () => {
                         className="bg-white/80 backdrop-blur-md border border-black/10 rounded-lg shadow-lg p-8 transition-all"
                     >
                         <span className="text-sm font-mono text-purple-600 mb-2 block">{edu.year}</span>
-                        <h3 className="text-xl font-bold font-syne mb-2">{edu.school}</h3>
-                        <p className="text-black/60 mb-4">{edu.degree}</p>
+                        <h3 className="text-xl font-bold font-syne mb-1.5">{edu.school}</h3>
+                        <p className="text-black/75 font-medium mb-1">{edu.degree}</p>
+                        {edu.location && (
+                            <p className="text-xs font-mono text-black/50 mb-4">{edu.location}</p>
+                        )}
                         <span className="inline-block px-3 py-1 bg-black/10 rounded-full text-sm text-black/80">{edu.grade}</span>
                     </motion.div>
                 ))}

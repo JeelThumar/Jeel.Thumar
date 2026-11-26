@@ -11,9 +11,9 @@ export const profile = {
     currentCompany: "Amrytt Media LLC",
     resumePath: "/Jeel_Thumar_Resume.pdf",
     heroBio:
-        "I'm <strong>Jeel Thumar</strong> — a <strong>Product Designer & UI/UX Specialist</strong> with <strong>4+ years</strong> of experience crafting intuitive enterprise internal tools, multi-role commerce platforms, and scalable design systems that bridge business goals with human clarity.",
+        "I'm <strong>Jeel Thumar</strong> — a <strong>Product & UI/UX Designer</strong> with <strong>3.5+ years</strong> of experience creating user-centred digital experiences across websites, mobile apps, e-commerce, learning platforms, and operational dashboards.",
     summary:
-        "Product Designer & UI/UX Specialist based in Ahmedabad, India. Experienced in reporting directly to CEOs and founders, translating complex business priorities into user-centered digital products, reusable component libraries, and high-clarity admin consoles.",
+        "Product and UI/UX Designer with 3.5+ years of combined professional and freelance experience creating user-centred digital experiences across websites, mobile applications, e-commerce, learning platforms and operational dashboards. In current and previous roles, reported directly to the CEO/founder and collaborated closely on business priorities, project requirements, and delivery.",
     links: {
         linkedin: "https://www.linkedin.com/in/jeelthumar/",
         figma: "https://www.figma.com/@justtjeel",
@@ -29,12 +29,29 @@ export const coreCompetencies = [
     "User Flows & Journey Mapping",
     "Wireframing & Prototyping",
     "Responsive Web & Mobile Design",
-    "Design Systems & Token Architecture",
+    "Design Systems",
     "Usability-Focused Design",
-    "Stakeholder & Founder Collaboration",
-    "End-to-End Project Ownership",
-    "Social Media & Visual Communication"
+    "Stakeholder Collaboration",
+    "Project Ownership",
+    "Social Media & Visual Content"
 ];
+
+export const tools = {
+    design: [
+        "Figma",
+        "Framer",
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Adobe XD",
+        "Canva",
+        "Picsart"
+    ],
+    technical: [
+        "HTML",
+        "CSS",
+        "JavaScript fundamentals"
+    ]
+};
 
 export const capabilityPillars = [
     {
@@ -66,7 +83,7 @@ export const capabilityPillars = [
 export const coreProjects = [
     {
         id: "guestpostlinks-admin",
-        title: "GuestPostLinks Admin Panel",
+        title: "GuestPostLinks – Admin Panel Redesign",
         category: "Internal Tools / B2B",
         platform: "Web & Admin",
         role: "Product Designer",
@@ -75,120 +92,102 @@ export const coreProjects = [
         caseStudyId: "guestpostlinks-admin",
         link: "https://guestpostlinks.net/about-us/",
         description:
-            "Redesigned the core operational admin console used by 50+ internal team members managing workflows across 65,000+ publishers, unifying order flows, pricing, and content management.",
+            "Redesigned the main internal operations panel used by 50+ team members handling millions of customers and 65,000+ publishers. Mapped real team workflows through repeated discussions, simplified task flows, and unified module patterns to reduce operation time across daily work.",
         highlights: [
-            "50+ internal team users across daily operations",
-            "65,000+ publisher domains & pricing workflows",
-            "100% table, filter, and action pattern consistency"
+            "50+ internal team members handling millions of customers",
+            "65,000+ publisher domains, pricing & placement workflows",
+            "Unified module patterns reducing daily operation time"
         ],
         tech: ["Product Design", "Admin Systems", "Workflow Mapping", "Figma"]
     },
     {
         id: "dkc-designer-kids-club",
         title: "Designer Kids Club",
-        category: "E-commerce / Fashion-Tech",
+        category: "E-commerce Clothing Platform",
         platform: "Web & Mobile App",
         role: "Product & UI/UX Design",
         year: "2025",
         status: "Case Study in Synthesis",
         caseStudyId: "dkc-designer-kids-club",
         description:
-            "End-to-end multi-role fashion-tech platform enabling customers to buy, sell, rent, and repair designer kidswear with virtual try-on, vendor portals, and an operations admin console.",
+            "Designed a fashion-tech ecosystem for buying, selling, renting and repairing clothing, including customer-facing experiences and an admin panel for platform operations. Explored features such as virtual try-on, digital wardrobe and image-based search.",
         highlights: [
-            "Buy, sell, rent, and repair customer journeys",
-            "Virtual try-on experience & vendor portals",
-            "Unified platform operations admin console"
+            "Buy, sell, rent & repair customer journeys",
+            "Explored virtual try-on, digital wardrobe & image-based search",
+            "Platform operations admin console"
         ],
-        tech: ["Mobile App", "Web Platform", "Multi-Role UX", "Figma"]
+        tech: ["Fashion-Tech", "Mobile & Web", "Multi-Role UX", "Figma"]
     },
     {
         id: "adani-saksham",
         title: "Adani Saksham",
-        category: "Learning Platform",
+        category: "Learning & Skill Development",
         platform: "Web Portal",
         role: "UI/UX Design",
         year: "2025",
         status: "Case Study in Synthesis",
         caseStudyId: "adani-saksham",
         description:
-            "Triple-role EdTech and skill development portal connecting learners, trainers, and administrators with structured course catalogs, progress tracking, and reporting.",
+            "Designed experiences for learners, trainers and administrators, including course catalogues, dashboards, reporting modules and course-launch workflows.",
         highlights: [
             "Three-role portal for Learners, Trainers & Admins",
-            "Structured course catalogs & learning pathways",
-            "Operational reporting & cohort management"
+            "Course catalogues, dashboards & reporting modules",
+            "End-to-end course-launch workflows"
         ],
         tech: ["EdTech", "Web Portal", "Role-Based UX", "Reporting"]
     },
     {
-        id: "foodboss",
-        title: "FoodBoss",
-        category: "Quick Commerce",
-        platform: "Web & Mobile App",
-        role: "UI/UX Design",
-        year: "2024",
-        status: "Case Study in Synthesis",
-        caseStudyId: "foodboss",
-        description:
-            "Instant food delivery application paired with dedicated role-based panels for vendors, content writers, and master platform administrators.",
-        highlights: [
-            "Consumer instant delivery app experience",
-            "Role-based panels for vendors & writers",
-            "Master administration & order oversight"
-        ],
-        tech: ["Quick Commerce", "Mobile App", "Vendor Console", "Figma"]
-    },
-    {
         id: "group-landmark",
         title: "Group Landmark",
-        category: "Automotive",
+        category: "Automotive Dealer Platforms",
         platform: "Web & Mobile App",
         role: "UI/UX Design",
         year: "2024",
         status: "Case Study in Synthesis",
         caseStudyId: "group-landmark",
         description:
-            "Customer vehicle discovery and dealer operations platform built for Honda and Mercedes-Benz dealerships, uniting inventory browsing and service booking.",
+            "Designed product detail pages and admin experiences for Honda and Mercedes-Benz dealership operations, including inventory, booking and service-scheduling workflows.",
         highlights: [
-            "Honda & Mercedes-Benz dealer operations",
-            "Vehicle inventory discovery & comparison",
-            "Streamlined service booking & customer flows"
+            "Product detail pages for Honda & Mercedes-Benz dealerships",
+            "Inventory management & vehicle booking flows",
+            "Dealer admin & service-scheduling workflows"
         ],
         tech: ["Automotive", "Dealer Systems", "Web & Mobile", "UI/UX"]
     },
     {
-        id: "leostarts",
-        title: "LeoStarts",
-        category: "Business Services",
-        platform: "Responsive Web",
+        id: "foodboss",
+        title: "FoodBoss",
+        category: "Quick Commerce Platform",
+        platform: "Web & Mobile App",
         role: "UI/UX Design",
         year: "2024",
-        status: "Shipped Live",
-        link: "https://leostartsservices.com/",
+        status: "Case Study in Synthesis",
+        caseStudyId: "foodboss",
         description:
-            "Responsive business consulting and corporate services platform featuring clear service catalogs, trust-building discovery layouts, and client onboarding flows.",
+            "Designed a multi-role commerce experience spanning food delivery and instant commerce, with user applications and role-based operational panels.",
         highlights: [
-            "Structured service catalogs & discovery layout",
-            "Trust-building conversion architecture",
-            "Streamlined client onboarding journeys"
+            "Consumer food delivery & instant commerce apps",
+            "Role-based panels for vendors, writers & admins",
+            "Streamlined order & catalog operations"
         ],
-        tech: ["Responsive Web", "Service Discovery", "Conversion UX", "Figma"]
+        tech: ["Quick Commerce", "Mobile App", "Role-Based Panels", "Figma"]
     },
     {
         id: "aavak",
         title: "Aavak",
-        category: "Multi-Role Commerce",
+        category: "Multi-Role Commerce Platform",
         platform: "Web & Mobile App",
         role: "UI/UX Design",
         year: "2026",
         status: "In Dev",
         description:
-            "Comprehensive multi-role commerce ecosystem spanning super-admin governance, vendor management, warehouse logistics, and consumer shopping.",
+            "Designed web and mobile experiences and role-based panels for super-admin, vendors and warehouse operations.",
         highlights: [
-            "Super-admin & vendor management consoles",
-            "Warehouse logistics & fulfillment workflows",
-            "Consumer shopping web and mobile experience"
+            "Super-admin & vendor management panels",
+            "Warehouse logistics & operational workflows",
+            "Consumer web and mobile shopping experiences"
         ],
-        tech: ["Multi-Role Commerce", "Logistics", "Admin UX", "Mobile & Web"]
+        tech: ["Multi-Role Commerce", "Warehouse Ops", "Admin UX", "Mobile & Web"]
     }
 ];
 
@@ -197,40 +196,40 @@ export const liveWebsites = [
         id: "kol-site",
         title: "KOL Site",
         url: "https://www.kolsite.com/",
-        category: "Admin & Web Experience",
-        role: "Admin Website Design & Digital Experience Platform",
+        category: "Admin Website & Digital Experience",
+        role: "Admin Website Design / Digital Experience",
         description: "High-conversion digital experience and administration hub."
     },
     {
         id: "leostarts-services",
         title: "LeoStarts Services",
         url: "https://leostartsservices.com/",
-        category: "Business Consulting & Corporate Services",
+        category: "Business Consulting & Services",
         role: "UI/UX Design",
-        description: "Responsive consulting platform with clear service discovery and client onboarding."
+        description: "Business consulting and services website with clear service discovery and client onboarding."
     },
     {
         id: "nirvaan-live-foundation",
         title: "Nirvaan Live Foundation",
         url: "https://nirvaanlivefoundation.org/",
-        category: "Non-Profit & NGO",
+        category: "Non-Profit Organisation",
         role: "UI/UX & Web Design",
-        description: "Non-profit foundation web presence highlighting social welfare initiatives."
+        description: "Non-profit organisation website highlighting social welfare initiatives."
     },
     {
         id: "praya-diamonds",
         title: "Praya Diamonds",
         url: "https://prayadiamonds.com/",
-        category: "Luxury Jewellery",
+        category: "Jewellery Website",
         role: "UI/UX Design",
-        description: "Premium digital showcase exhibiting bespoke diamond jewellery craftsmanship."
+        description: "Jewellery website showcasing bespoke diamond craftsmanship."
     },
     {
         id: "nexsaar-technologies",
         title: "Nexsaar Technologies",
         url: "https://nexsaar.com/",
-        category: "IT Services & Software Solutions",
+        category: "IT Service Website",
         role: "UI/UX Design",
-        description: "Modern technology consulting site focused on clarity and prospective client conversions."
+        description: "IT Service website focused on clarity and prospective client conversions."
     }
 ];

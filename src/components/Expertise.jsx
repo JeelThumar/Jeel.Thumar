@@ -36,6 +36,7 @@ const Expertise = () => {
 
     const pillars = data.capabilityPillars || [];
     const competencies = data.coreCompetencies || data.skills || [];
+    const tools = data.tools || { design: [], technical: [] };
     const languages = data.languages || [];
 
     return (
@@ -91,25 +92,72 @@ const Expertise = () => {
             )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
-                {/* Core Competencies Section */}
-                <div>
-                    <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-widest mb-6 sm:mb-8 text-black/60">
-                        Core Competencies
-                    </h3>
-                    <div className="flex flex-wrap gap-2.5 sm:gap-3">
-                        {competencies.map((skill, index) => (
-                            <motion.span
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.04 }}
-                                className="px-3.5 sm:px-4 py-2 bg-white border border-black/15 rounded-full text-xs sm:text-sm md:text-base font-medium text-black/80 hover:border-black hover:bg-purple-50 transition-all cursor-default shadow-xs"
-                            >
-                                {skill}
-                            </motion.span>
-                        ))}
+                {/* Core Competencies & Tools Section */}
+                <div className="space-y-10 sm:space-y-12">
+                    <div>
+                        <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-widest mb-6 sm:mb-8 text-black/60">
+                            Core Competencies
+                        </h3>
+                        <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                            {competencies.map((skill, index) => (
+                                <motion.span
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.04 }}
+                                    className="px-3.5 sm:px-4 py-2 bg-white border border-black/15 rounded-full text-xs sm:text-sm md:text-base font-medium text-black/80 hover:border-black hover:bg-purple-50 transition-all cursor-default shadow-xs"
+                                >
+                                    {skill}
+                                </motion.span>
+                            ))}
+                        </div>
                     </div>
+
+                    {(tools.design?.length > 0 || tools.technical?.length > 0) && (
+                        <div>
+                            <h3 className="text-lg sm:text-xl font-bold font-syne uppercase tracking-widest mb-6 text-black/60">
+                                Design & Technical Tools
+                            </h3>
+                            <div className="space-y-4">
+                                {tools.design?.length > 0 && (
+                                    <div className="bg-white border border-black/15 rounded-xl p-4 sm:p-5">
+                                        <div className="font-mono text-[11px] uppercase tracking-widest text-purple-700 font-semibold mb-3">
+                                            Design Tools
+                                        </div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {tools.design.map((tool) => (
+                                                <span
+                                                    key={tool}
+                                                    className="px-3 py-1 bg-purple-50 border border-purple-200 rounded-md text-xs sm:text-sm font-medium text-black/85"
+                                                >
+                                                    {tool}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {tools.technical?.length > 0 && (
+                                    <div className="bg-white border border-black/15 rounded-xl p-4 sm:p-5">
+                                        <div className="font-mono text-[11px] uppercase tracking-widest text-black/55 font-semibold mb-3">
+                                            Technical Fundamentals
+                                        </div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {tools.technical.map((tool) => (
+                                                <span
+                                                    key={tool}
+                                                    className="px-3 py-1 bg-black/5 border border-black/10 rounded-md text-xs sm:text-sm font-mono text-black/80"
+                                                >
+                                                    {tool}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Beyond Work & Languages Section */}

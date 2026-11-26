@@ -3,6 +3,7 @@ import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
 import {
   profile,
   coreCompetencies,
+  tools,
   capabilityPillars,
   coreProjects,
   liveWebsites,
@@ -88,6 +89,7 @@ const migrateData = async () => {
             profile,
             heroBio: profile.heroBio,
             coreCompetencies,
+            tools,
             capabilityPillars,
             coreProjects,
             liveWebsites,

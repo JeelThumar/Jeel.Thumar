@@ -118,27 +118,27 @@ export const upcomingCaseStudies = [
         title: "Designer Kids Club",
         category: "Fashion-Tech & Multi-Role Commerce",
         scope:
-            "Customer buying/selling/renting/repairing mobile app, vendor portals, virtual try-on, and platform administration."
+            "Fashion-tech ecosystem for buying, selling, renting and repairing clothing, including customer-facing experiences, admin panel, virtual try-on, digital wardrobe, and image-based search."
     },
     {
         id: "adani-saksham",
         title: "Adani Saksham",
-        category: "EdTech & Skill Development",
+        category: "Learning & Skill Development",
         scope:
-            "Triple-role portal connecting learners, trainers, and administrators with structured course catalogs and reporting."
+            "Triple-role portal connecting learners, trainers, and administrators with course catalogues, dashboards, reporting modules, and course-launch workflows."
     },
     {
         id: "group-landmark",
         title: "Group Landmark",
         category: "Automotive & Dealer Operations",
         scope:
-            "Customer vehicle discovery and dealer management systems for Honda and Mercedes-Benz dealerships."
+            "Product detail pages and admin experiences for Honda and Mercedes-Benz dealership operations, including inventory, booking, and service-scheduling workflows."
     },
     {
         id: "foodboss",
         title: "FoodBoss",
         category: "Quick Commerce & Multi-Role Operations",
         scope:
-            "Consumer food delivery application integrated with role-based vendor, writer, and master administration consoles."
+            "Multi-role commerce experience spanning food delivery and instant commerce, with user applications and role-based operational panels."
     }
 ];
