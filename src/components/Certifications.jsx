@@ -11,10 +11,10 @@ const Certifications = () => {
     const { data } = useSiteData();
 
     return (
-        <section ref={sectionRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
+        <section ref={sectionRef} className="py-16 md:py-24 px-5 sm:px-8 md:px-12 max-w-7xl mx-auto text-black relative overflow-x-clip mb-12 md:mb-24">
 
-            <h2 className="text-4xl md:text-6xl font-syne font-bold mb-16">Certifications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-syne font-bold mb-10 sm:mb-16">Certifications</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                 {data.certifications.map((cert, index) => (
                     <motion.a
                         href={cert.link}

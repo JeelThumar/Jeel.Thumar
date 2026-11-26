@@ -22,16 +22,14 @@ const Layout = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Back to Top visibility
             if (window.scrollY > 300) {
                 setShowBackToTop(true);
             } else {
                 setShowBackToTop(false);
             }
 
-            // Navbar visibility (hide at bottom only on mobile)
             if (window.innerWidth < 768) {
-                const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300;
+                const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 260;
                 setIsNavbarVisible(!isAtBottom);
             } else {
                 setIsNavbarVisible(true);
@@ -42,7 +40,6 @@ const Layout = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Scroll to top on route change
     useEffect(() => {
         if (lenis) {
             lenis.scrollTo(0, { immediate: true });
@@ -74,10 +71,12 @@ const Layout = () => {
 
                 <GrainOverlay />
                 <Navbar isVisible={isNavbarVisible && !isNavbarPersistentHidden} />
-                <main className="flex-grow">
+                <main className="flex-grow w-full">
                     <Outlet context={{ setIsNavbarPersistentHidden }} />
                 </main>
-                <Contact />
+                <div className="pb-20 md:pb-0">
+                    <Contact />
+                </div>
 
                 <AnimatePresence>
                     {showBackToTop && (
@@ -88,9 +87,10 @@ const Layout = () => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={scrollToTop}
-                            className="fixed bottom-8 right-8 z-50 p-4 bg-black text-white rounded-full shadow-lg border border-white/20 hover:bg-gray-900 transition-colors"
+                            aria-label="Back to top"
+                            className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 p-3.5 md:p-4 bg-black text-white rounded-full shadow-lg border border-white/20 hover:bg-gray-900 transition-colors cursor-pointer"
                         >
-                            <ArrowUp size={20} />
+                            <ArrowUp size={18} />
                         </motion.button>
                     )}
                 </AnimatePresence>

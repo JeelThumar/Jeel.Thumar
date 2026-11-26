@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Home, Briefcase, PenTool, Mail } from 'lucide-react';
+import { Home, Briefcase, BookOpen, PenTool, Mail } from 'lucide-react';
 import { useLenis } from 'lenis/react';
 
 const Navbar = ({ isVisible }) => {
@@ -22,23 +22,43 @@ const Navbar = ({ isVisible }) => {
     const navItems = [
         { path: '/', label: 'Home', icon: Home },
         { path: '/work', label: 'Work', icon: Briefcase },
+        { path: '/case-studies', label: 'Case Studies', icon: BookOpen },
         { path: '/blog', label: 'Blog', icon: PenTool },
         { path: '#contact', label: 'Contact', icon: Mail, onClick: handleContactClick },
     ];
 
+    const checkActive = (itemPath) => {
+        if (itemPath === '/') return location.pathname === '/';
+        if (itemPath === '/work') {
+            return location.pathname === '/work' || location.pathname.startsWith('/project/');
+        }
+        if (itemPath === '/case-studies') {
+            return (
+                location.pathname.startsWith('/case-studies') ||
+                location.pathname.startsWith('/casestudies') ||
+                location.pathname.startsWith('/case-study') ||
+                location.pathname.startsWith('/casestudy')
+            );
+        }
+        if (itemPath === '/blog') {
+            return location.pathname === '/blog' || location.pathname.startsWith('/blog/');
+        }
+        return location.pathname === itemPath;
+    };
+
     return (
         <AnimatePresence>
             {isVisible && (
-                <div className="fixed bottom-6 md:bottom-auto md:top-8 left-1/2 -translate-x-1/2 z-50 w-auto">
+                <div className="fixed bottom-6 md:bottom-auto md:top-8 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw]">
                     <motion.nav
                         initial={{ y: -100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -100, opacity: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className="flex items-center gap-2 p-2 bg-white/80 backdrop-blur-md border border-black/10 rounded-full shadow-lg"
+                        className="flex items-center gap-1 sm:gap-2 p-1.5 sm:p-2 bg-white/85 backdrop-blur-md border border-black/10 rounded-full shadow-lg"
                     >
                         {navItems.map((item) => {
-                            const isActive = location.pathname === item.path;
+                            const isActive = checkActive(item.path);
                             const Icon = item.icon;
 
                             // Render custom button for Contact
@@ -47,7 +67,7 @@ const Navbar = ({ isVisible }) => {
                                     <button
                                         key={item.label}
                                         onClick={item.onClick}
-                                        className="relative px-4 py-2 rounded-full transition-all group flex items-center gap-2 text-black hover:bg-black/5 cursor-pointer"
+                                        className="relative px-3 sm:px-4 py-2 rounded-full transition-all group flex items-center gap-2 text-black hover:bg-black/5 cursor-pointer whitespace-nowrap"
                                         aria-label={item.label}
                                     >
                                         <Icon size={18} />
@@ -60,7 +80,7 @@ const Navbar = ({ isVisible }) => {
                                 <Link
                                     key={item.path}
                                     to={item.path}
-                                    className={`relative px-4 py-2 rounded-full transition-all group flex items-center gap-2 ${isActive
+                                    className={`relative px-3 sm:px-4 py-2 rounded-full transition-all group flex items-center gap-2 whitespace-nowrap ${isActive
                                         ? 'bg-black text-white'
                                         : 'text-black hover:bg-black/5'
                                         }`}

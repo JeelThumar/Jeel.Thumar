@@ -31,15 +31,15 @@ const Blog = ({ limit }) => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto text-black relative overflow-visible mb-24">
+        <section ref={sectionRef} className="py-16 md:py-24 px-5 sm:px-8 md:px-12 max-w-7xl mx-auto text-black relative overflow-x-clip mb-12 md:mb-24">
 
-            <div className="flex justify-between items-end mb-16 relative z-10">
+            <div className="flex justify-between items-end mb-10 sm:mb-16 relative z-10">
                 {limit ? (
-                    <h2 className="text-4xl md:text-6xl font-syne font-bold">
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-syne font-bold">
                         Recent Thoughts
                     </h2>
                 ) : (
-                    <h2 className="text-6xl md:text-8xl font-syne font-bold uppercase leading-[0.8] tracking-tighter mix-blend-difference text-black">
+                    <h2 className="text-4xl sm:text-6xl md:text-8xl font-syne font-bold uppercase leading-[0.85] tracking-tighter mix-blend-difference text-black">
                         Recent <br className="hidden md:block"/> <span className="text-transparent stroke-black [-webkit-text-stroke:1px_black]">Thoughts</span>
                     </h2>
                 )}

@@ -203,7 +203,8 @@ const SiteDataArrayEditor = ({ fieldKey, title, fields }) => {
                 newArray.splice(index, 1);
                 
                 await updateDoc(doc(db, "siteData", "general"), {
-                    [fieldKey]: newArray
+                    [fieldKey]: newArray,
+                    schemaVersion: 6
                 });
                 
                 toast.success("Item deleted successfully!", { id: loadingToast });
@@ -232,7 +233,8 @@ const SiteDataArrayEditor = ({ fieldKey, title, fields }) => {
             }
 
             await updateDoc(doc(db, "siteData", "general"), {
-                [fieldKey]: newArray
+                [fieldKey]: newArray,
+                schemaVersion: 6
             });
             
             toast.success("Item saved successfully!", { id: loadingToast });
@@ -313,7 +315,7 @@ const GeneralEditor = () => {
         setSaving(true);
         try {
             const docRef = doc(db, "siteData", "general");
-            await updateDoc(docRef, data);
+            await updateDoc(docRef, { ...data, schemaVersion: 6 });
             toast.success("General data updated successfully!");
         } catch (error) {
             console.error("Error updating document: ", error);
@@ -460,7 +462,7 @@ const CollectionEditor = ({ collectionName, title, fields }) => {
             const docId = editingItem ? editingItem.id : (formData.id || Date.now().toString());
             
             // Remove 'id' from formData payload if it exists, since Firestore uses doc ID
-            const payload = { ...formData };
+            const payload = { ...formData, schemaVersion: 6 };
             if (!editingItem) {
                 payload.id = docId; // Ensure id is saved in the doc if creation
             }

@@ -4,7 +4,15 @@ import { doc, getDoc } from 'firebase/firestore';
 
 // Fallback static data
 import {
+    profile,
+    coreCompetencies,
+    capabilityPillars,
+    coreProjects,
+    liveWebsites,
+    caseStudies,
+    upcomingCaseStudies,
     skills,
+    languages,
     interests,
     stats,
     experiences,
@@ -16,7 +24,16 @@ import {
 
 export const useSiteData = () => {
     const [data, setData] = useState({
+        profile,
+        heroBio: profile.heroBio,
+        coreCompetencies,
+        capabilityPillars,
+        coreProjects,
+        liveWebsites,
+        caseStudies,
+        upcomingCaseStudies,
         skills,
+        languages,
         interests,
         stats,
         experiences,
@@ -28,20 +45,28 @@ export const useSiteData = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        if (import.meta.env.VITE_CONTENT_SOURCE === 'local') {
+            setLoading(false);
+            return;
+        }
+
         const fetchData = async () => {
             try {
                 const docRef = doc(db, "siteData", "general");
                 const docSnap = await getDoc(docRef);
-                
+
                 if (docSnap.exists()) {
-                    // Merge fetched data with the initial state structure
-                    setData(prevData => ({
-                        ...prevData,
-                        ...docSnap.data()
-                    }));
+                    const cloudData = docSnap.data();
+                    // Only apply cloud overrides if migrated/saved under v6+ schema
+                    if (cloudData.schemaVersion >= 6) {
+                        setData(prevData => ({
+                            ...prevData,
+                            ...cloudData
+                        }));
+                    }
                 }
             } catch (error) {
-                console.error("Error fetching site data:", error);
+                console.error("Error fetching site data (using local fallback):", error);
             } finally {
                 setLoading(false);
             }

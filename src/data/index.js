@@ -1,5 +1,22 @@
+import { Linkedin, Instagram, Car, Trophy, Cpu, Figma, Dribbble, Compass, Utensils } from 'lucide-react';
+import {
+    profile,
+    coreCompetencies,
+    capabilityPillars,
+    coreProjects,
+    liveWebsites
+} from './profile';
+import { caseStudies, upcomingCaseStudies } from './caseStudies';
 
-import { Linkedin, Instagram, Car, Trophy, Cpu, Figma } from 'lucide-react';
+export {
+    profile,
+    coreCompetencies,
+    capabilityPillars,
+    coreProjects,
+    liveWebsites,
+    caseStudies,
+    upcomingCaseStudies
+};
 
 export const projects = [
     {
@@ -22,7 +39,7 @@ export const projects = [
         year: "2023",
         img: "https://cdn.dribbble.com/userupload/12544152/file/original-8edef780f9084222e9c59ee1e96e63b4.png?resize=1440x1024",
         rotation: -2,
-        description: "Explaining the nuances of product design thinking through visual storytelling and bold layout choices. This piece serves as both a portfolio highlight and an educational resource, breaking down the 'Double Diamond' design process into digestible visual metaphors.",
+        description: "Explaining the nuances of product design thinking through visual storytelling and bold layout choices. This piece serves both as a portfolio highlight and an educational resource, breaking down the 'Double Diamond' design process into digestible visual metaphors.",
         images: [
             "https://cdn.dribbble.com/userupload/12544152/file/original-8edef780f9084222e9c59ee1e96e63b4.png?resize=1440x1024"
         ],
@@ -62,21 +79,21 @@ export const projects = [
         year: "2024",
         img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
         rotation: 2,
-        description: "A comprehensive consistency tracking application built with React and TailwindCSS. Features include habit tracking, daily logging, and AI-powered insights.",
+        description: "Web app exploration for daily routine management and tracking, featuring habit tracking, daily logging, and clear visual progress indicators.",
         images: [
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
         ],
-        tech: ["React", "TailwindCSS", "Framer Motion", "Vite"]
+        tech: ["Figma", "Web App", "Routine Tracking", "UI Design"]
     },
     {
         id: "elevating-ux",
-        title: "Elevating User Experience: A Modern UI Design for Digital Tran",
+        title: "Elevating User Experience",
         category: "Product Design",
         year: "2025",
         img: "/images/elevating-ux/1.png",
         rotation: 2,
-        description: "🚀 Excited to share my latest UI design for a cutting-edge software company! This website is crafted to showcase their work with a modern, minimalistic aesthetic, focusing on clean lines and smooth animations for an immersive user experience. Designed to accelerate digital transformation, the portfolio highlights the company’s key projects in web and mobile applications. The visual concept blends simplicity with creativity, ensuring both elegance and functionality. Looking forward to hearing your thoughts on this design!",
+        description: "Modern SaaS software presentation crafted with clean lines, structured service highlights, and immersive card layouts to showcase digital transformation work across web and mobile applications.",
         images: [
             "/images/elevating-ux/1.png",
             "/images/elevating-ux/2.png",
@@ -87,12 +104,12 @@ export const projects = [
     },
     {
         id: "serene-escape",
-        title: "Serene Escape: Crafting a Holistic Massage Spa Experience",
+        title: "Serene Escape: Holistic Spa Experience",
         category: "Web Design",
         year: "2025",
         img: "/images/serene-escape/1.png",
         rotation: -3,
-        description: "Super excited to share my latest Figma project! ✨ I designed a massage spa website that’s all about relaxation, simplicity, and a smooth user experience. From soothing colors to an easy-to-navigate layout, every detail is crafted to make digital visits feel as calming as a real spa day. 🌿💆‍♀️My goal was to balance minimalism with functionality while capturing the spa’s warm, personalized approach to well-being. Check it out and let me know what you think—I’d love your feedback! 💖😊",
+        description: "A holistic spa digital sanctuary utilizing calming earthy tones, warm storytelling, and a minimal-friction booking flow.",
         images: [
             {
                 type: "grid-2",
@@ -100,7 +117,7 @@ export const projects = [
                     "/images/serene-escape/1.png",
                     "/images/serene-escape/2.png"
                 ]
-            },
+            }
         ],
         tech: ["Figma", "Web Design", "Minimalism", "UX"]
     },
@@ -111,7 +128,7 @@ export const projects = [
         year: "2025",
         img: "/images/god-is-designer/desktop.png",
         rotation: 1,
-        description: "Wallpaper for Mobile & Desktop for Mercedes Lover",
+        description: "Art direction and digital wallpapers for mobile and desktop crafted for automotive enthusiasts.",
         images: [
             "/images/god-is-designer/desktop.png",
             "/images/god-is-designer/mobile.png"
@@ -120,12 +137,12 @@ export const projects = [
     },
     {
         id: "match-mantra",
-        title: "Designing Connections that Matter – Match Mantra 💍",
+        title: "Match Mantra — Designing Connections",
         category: "UI/UX Design",
         year: "2025",
         img: "/images/match-mantra/1.png",
         rotation: -2,
-        description: "Love is not found. It is summoned. A modern take on tradition — here’s my latest design for Match Mantra, a premium matchmaking experience built around meaningful Indian connections.\n\nFrom storytelling to structure, every screen is crafted with clarity, elegance, and purpose.\n\n🔸 Clean brand system with rooted Indian tones\n\n🔸 Emotion-first layout — trust before profile\n\n🔸 Simplified flows to reflect exclusivity\n\nThis was one of those projects where design felt natural — smooth decisions, refined palettes, and pixel-level precision.\n\nAlways open to thoughts, feedback, or just a design chat.\n\nFeel free to ask anything! 😊",
+        description: "A premium matchmaking interface balancing rooted cultural heritage with clean modern UI.\n\n• Clean brand system with rooted Indian tones\n• Emotion-first layout — trust before profile\n• Simplified flows to reflect exclusivity",
         images: [
             {
                 type: "grid-2",
@@ -138,26 +155,91 @@ export const projects = [
             "/images/match-mantra/4.png"
         ],
         tech: ["Figma", "UI Design", "Mobile Design", "Branding"]
-    },
+    }
 ];
 
 export const experiences = [
-    { year: 'Apr 2026 - Present', role: 'Product Designer', company: 'AMRYTT MEDIA LLC', location: 'Ahmedabad, India', description: 'Designing digital products, user interfaces, and engaging user experiences.' },
-    { year: 'Sep 2023 - Apr 2026', role: 'UI/UX Designer', company: 'Demaze Technology', location: 'Ahmedabad, India', description: 'Designing intuitive user interfaces and enhancing user experiences.' },
-    { year: 'Jan 2021 - Present', role: 'Freelance UI/UX Designer', company: 'Self-Employed', location: 'Remote', description: 'Logo Design, Photo Editing, and creating custom UI solutions for diverse clients.' },
+    {
+        year: "April 2026 – October 2026",
+        role: "Product Designer",
+        company: "Amrytt Media LLC",
+        location: "Ahmedabad, India",
+        description:
+            "Led the redesign of the core GuestPostLinks platform and administrative operations while collaborating directly with the CEO/Founder.",
+        highlights: [
+            "Led the redesign of the core GuestPostLinks platform and administrative operations.",
+            "Collaborated directly with the CEO/Founder on feature definitions, roadmaps, and delivery schedules.",
+            "Formulated systematic UI component libraries to unify 50+ internal operational tools."
+        ]
+    },
+    {
+        year: "September 2023 – April 2026",
+        role: "UI/UX Designer",
+        company: "Demaze Technology",
+        location: "Ahmedabad, India",
+        description:
+            "Designed multi-platform web and mobile experiences across EdTech, automotive, quick commerce, and business services.",
+        highlights: [
+            "Designed multi-platform web and mobile experiences across EdTech, automotive, quick commerce, and business services.",
+            "Created wireframes, high-fidelity prototypes, and multi-role administrative consoles.",
+            "Directed marketing visuals, branding assets, and promotional design collateral.",
+            "Reported directly to the CEO/Founder to translate client briefs into shipped products."
+        ]
+    },
+    {
+        year: "January 2021 – Present",
+        role: "Independent Designer",
+        company: "Freelance UI/UX & Graphic Designer",
+        location: "Remote / Global",
+        description:
+            "Shipped custom web designs, digital products, brand identities, and visual assets for diverse businesses.",
+        highlights: [
+            "Shipped custom web designs, digital products, brand identities, and visual assets for diverse businesses.",
+            "End-to-end client engagement: scoping, discovery, wireframing, client revisions, and asset handoff."
+        ]
+    }
 ];
 
 export const education = [
-    { school: 'Silver Oak University', degree: 'Bachelor of Technology Computer Engineering', year: 'Aug 2021 - Jun 2025', grade: 'CGPA: 9.02/10' },
-    { school: 'High School', degree: 'Schooling', year: '2021', grade: '74.6%' },
-    { school: 'Secondary School', degree: 'Schooling', year: '2019', grade: '79%' },
+    {
+        school: "Silver Oak University",
+        degree: "Bachelor of Technology (B.Tech) in Computer Engineering",
+        year: "Aug 2021 – Jun 2025",
+        grade: "CGPA: 9.02 / 10"
+    },
+    {
+        school: "Tapovan Group of School",
+        degree: "Higher Secondary Certificate (12th Grade)",
+        year: "2020 – 2021",
+        grade: "Score: 74.6%"
+    }
 ];
 
 export const certifications = [
-    { title: 'Foundations of User Experience (UX) Design', issuer: 'Google | Coursera', year: '2025', link: 'https://www.coursera.org/account/accomplishments/verify/UMJCPWJ6QJBE' },
-    { title: 'Start the UX Design Process: Empathize, Define, and Ideate', issuer: 'Google | Coursera', year: '2023', link: 'https://www.coursera.org/account/accomplishments/verify/5UKVMCP3T3MX' },
-    { title: 'Coding Fundamentals', issuer: 'Google', year: '2022', link: 'https://www.linkedin.com/posts/jeelthumar_google-grasshopper-activity-7084604020706709504-cINN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADh2xs0BtML7xB0tRbwwjsHIz3CikQjqBxY' },
-    { title: 'Graphic Designing', issuer: 'Tops Technologies', year: '2022', link: 'https://www.linkedin.com/posts/jeelthumar_topstechnologies-graphicdesign-activity-7084604397342658561-bQcS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADh2xs0BtML7xB0tRbwwjsHIz3CikQjqBxY' },
+    {
+        title: "Foundations of User Experience (UX) Design",
+        issuer: "Google | Coursera",
+        year: "2025",
+        link: "https://www.coursera.org/account/accomplishments/verify/UMJCPWJ6QJBE"
+    },
+    {
+        title: "Get Started with Figma",
+        issuer: "Coursera",
+        year: "2023",
+        link: "https://www.coursera.org/account/accomplishments/verify/5UKVMCP3T3MX"
+    },
+    {
+        title: "Coding Fundamentals",
+        issuer: "Google Grasshopper",
+        year: "2022",
+        link: "https://www.linkedin.com/posts/jeelthumar_google-grasshopper-activity-7084604020706709504-cINN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADh2xs0BtML7xB0tRbwwjsHIz3CikQjqBxY"
+    },
+    {
+        title: "Graphic Designing",
+        issuer: "TOPS Technologies",
+        year: "2022",
+        link: "https://www.linkedin.com/posts/jeelthumar_topstechnologies-graphicdesign-activity-7084604397342658561-bQcS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADh2xs0BtML7xB0tRbwwjsHIz3CikQjqBxY"
+    }
 ];
 
 export const blogPosts = [
@@ -292,66 +374,89 @@ export const blogPosts = [
             "Before following any new UI design trend, it’s worth asking one important question: <strong>Does this design choice help users achieve their goal faster, or does it only make the interface look modern?</strong>",
             "Trends will continue to change. Design tools will evolve. But usability, accessibility, and clarity will always define great user experience."
         ]
-    },
+    }
 ];
 
 export const socials = [
     {
         platform: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/jeelthumar',
+        url: 'https://www.linkedin.com/in/jeelthumar/',
         icon: Linkedin
     },
     {
+        platform: 'Figma',
+        url: 'https://www.figma.com/@justtjeel',
+        icon: Figma
+    },
+    {
+        platform: 'Dribbble',
+        url: 'https://dribbble.com/justt-jeel',
+        icon: Dribbble
+    },
+    {
         platform: 'Instagram',
-        url: 'https://www.instagram.com/justt.jeel',
+        url: 'https://www.instagram.com/justt.jeel/',
         icon: Instagram
     },
     {
         platform: 'Behance',
         url: 'https://www.behance.net/jeelthumar',
         text: 'Be'
-    },
-    {
-        platform: 'Figma',
-        url: 'https://www.figma.com/@justtjeel',
-        icon: Figma
     }
 ];
 
-export const skills = ['UI/UX Design', 'Photo Editing', 'Figma', 'Framer', 'HTML/CSS'];
+export const skills = coreCompetencies;
+
+export const languages = [
+    { name: "Gujarati", level: "Native" },
+    { name: "Hindi", level: "Fluent" },
+    { name: "English", level: "Fluent" },
+    { name: "German", level: "Beginner · Learning" }
+];
 
 export const moreWork = [
     {
-        id: "grocery-app",
-        title: "App Designs",
-        category: "Mobile Design",
+        id: "mobile-app-workspace",
+        title: "Mobile App Design Workspace",
+        category: "Figma Workspace",
         year: "2024",
         link: "https://www.figma.com/design/BBWxNkV9gc04woch365Zqp/apps?node-id=0-1&p=f&t=b96tim5MFfRHXzkV-0",
-        description: "A modern Shopping, Health care, Rider, E-Commerce & ect. app design."
+        description: "Comprehensive mobile application design system covering modern Shopping, Healthcare, Rider/Logistics, and E-Commerce workflows."
     },
     {
-        id: "vehicle-admin",
-        title: "Admin Dashboard Designs",
-        category: "Dashboard Design",
+        id: "admin-dashboard-workspace",
+        title: "Admin Dashboard Design Workspace",
+        category: "Figma Workspace",
         year: "2024",
         link: "https://www.figma.com/design/NUGG2kv1dIOTdWsghKAIRl/admins-designs?node-id=0-1&p=f&t=4doG37iQFVOEQNi8-0",
-        description: "Admin dashboard for E-Commerce & Vehicle Management (Mobile & Web)."
+        description: "Multi-role administrative dashboard covering E-Commerce operations, vehicle fleet management, and cross-platform desktop & tablet views."
     }
 ];
 
 export const interests = [
-    { label: 'Driving', color: 'bg-yellow-200', rotate: 'rotate-1', icon: Car },
+    { label: 'Driving & Road Expeditions', color: 'bg-yellow-200', rotate: 'rotate-1', icon: Car },
     { label: 'Badminton', color: 'bg-purple-200', rotate: '-rotate-1', icon: Trophy },
-    { label: 'Tech', color: 'bg-pink-200', rotate: 'rotate-2', icon: Cpu }
+    { label: 'Technology & Gadgets', color: 'bg-pink-200', rotate: 'rotate-2', icon: Cpu },
+    { label: 'Exploring New Places', color: 'bg-cyan-200', rotate: '-rotate-2', icon: Compass },
+    { label: 'Culinary Arts & Cooking', color: 'bg-orange-200', rotate: 'rotate-1', icon: Utensils }
 ];
 
 export const stats = [
+    { value: "4", suffix: "+", label: "YEARS EXPERIENCE" },
+    { value: "65", suffix: "K+", label: "PUBLISHERS SUPPORTED" },
     { value: "10", suffix: "+", label: "PROJECTS SHIPPED" },
-    { value: "4", suffix: "yr", label: "EXPERIENCE" },
-    { value: "9.", suffix: "02", label: "CGPA - B.TECH" },
-    { value: "4", suffix: "+", label: "CERTIFICATIONS" }
+    { value: "9.", suffix: "02", label: "CGPA - B.TECH" }
 ];
 
 export const marqueeItems = [
-    "UI DESIGN", "UX DESIGN", "PHOTO EDITING", "FIGMA EXPERT", "FRAMER", "HTML - CSS", "DESIGN SYSTEMS", "PROTOTYPING", "BRAND DESIGN", "ICONOGRAPHY"
+    "PRODUCT DESIGN",
+    "UI/UX DESIGN",
+    "DESIGN SYSTEMS",
+    "INTERNAL TOOLS",
+    "USER FLOWS",
+    "PROTOTYPING",
+    "FIGMA EXPERT",
+    "MULTI-ROLE PLATFORMS",
+    "USABILITY TESTING",
+    "BRAND DESIGN"
 ];

@@ -1,6 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
 import {
+  profile,
+  coreCompetencies,
+  capabilityPillars,
+  coreProjects,
+  liveWebsites,
+  caseStudies,
+  upcomingCaseStudies,
   projects,
   experiences,
   education,
@@ -8,6 +15,7 @@ import {
   blogPosts,
   socials,
   skills,
+  languages,
   moreWork,
   interests,
   stats,
@@ -35,15 +43,18 @@ const convertIconsToStrings = (arr, platformKey = 'platform') => {
         if (item[platformKey] === 'LinkedIn') iconName = 'Linkedin';
         else if (item[platformKey] === 'Instagram') iconName = 'Instagram';
         else if (item[platformKey] === 'Figma') iconName = 'Figma';
-        else if (item.label === 'Driving') iconName = 'Car';
-        else if (item.label === 'Badminton') iconName = 'Trophy';
-        else if (item.label === 'Tech') iconName = 'Cpu';
-        
+        else if (item[platformKey] === 'Dribbble') iconName = 'Dribbble';
+        else if (item.label?.includes('Driving')) iconName = 'Car';
+        else if (item.label?.includes('Badminton')) iconName = 'Trophy';
+        else if (item.label?.includes('Tech')) iconName = 'Cpu';
+        else if (item.label?.includes('Exploring')) iconName = 'Compass';
+        else if (item.label?.includes('Culinary')) iconName = 'Utensils';
+
         const newItem = { ...item };
         if (iconName) {
             newItem.icon = iconName;
         } else if (newItem.icon) {
-            delete newItem.icon; // Remove complex component objects if we can't map them
+            delete newItem.icon;
         }
         return newItem;
     });
@@ -51,49 +62,49 @@ const convertIconsToStrings = (arr, platformKey = 'platform') => {
 
 const migrateData = async () => {
     try {
-        console.log("Starting migration to Firestore...");
+        console.log("Starting migration to Firestore (schemaVersion 6)...");
 
-        // 1. Migrate Collections (Arrays of objects with IDs or indices)
-        
-        // Projects
         const projectsRef = collection(db, "projects");
         for (const project of projects) {
-            await setDoc(doc(projectsRef, project.id), project);
+            await setDoc(doc(projectsRef, project.id), { ...project, schemaVersion: 6 });
         }
         console.log("Migrated projects.");
 
-        // More Work
         const moreWorkRef = collection(db, "moreWork");
         for (const work of moreWork) {
-            await setDoc(doc(moreWorkRef, work.id), work);
+            await setDoc(doc(moreWorkRef, work.id), { ...work, schemaVersion: 6 });
         }
         console.log("Migrated moreWork.");
 
-        // Blog Posts
         const blogPostsRef = collection(db, "blogPosts");
         for (const post of blogPosts) {
-            // Firestore IDs must be strings
-            await setDoc(doc(blogPostsRef, post.id.toString()), post);
+            await setDoc(doc(blogPostsRef, post.id.toString()), { ...post, schemaVersion: 6 });
         }
         console.log("Migrated blogPosts.");
 
-        // 2. Migrate Single Document Arrays (Store entire array in one document)
-        // This is easier for small lists like experiences, education, etc.
         const siteDataRef = doc(db, "siteData", "general");
-        
         await setDoc(siteDataRef, {
+            schemaVersion: 6,
+            profile,
+            heroBio: profile.heroBio,
+            coreCompetencies,
+            capabilityPillars,
+            coreProjects,
+            liveWebsites,
+            caseStudies,
+            upcomingCaseStudies,
             experiences,
             education,
             certifications,
             socials: convertIconsToStrings(socials),
             skills,
+            languages,
             interests: convertIconsToStrings(interests, 'label'),
             stats,
             marqueeItems
         }, { merge: true });
-        
-        console.log("Migrated siteData.");
 
+        console.log("Migrated siteData.");
         console.log("Migration completed successfully!");
         process.exit(0);
     } catch (error) {
